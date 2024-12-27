@@ -24,6 +24,22 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     background-color: #ffefef;
-    
 }
 
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.product__detail {
+    margin: 5% 10%;
+}
+
+.product__pictures {
+    margin-right: 1rem;
+}
+
+.product__description {
+    margin-left: 1rem;
+}
