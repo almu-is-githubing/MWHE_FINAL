@@ -23,7 +23,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    background-color: #ffefef;
+    background-color: var(--white);
 }
 
 img {
@@ -32,8 +32,10 @@ img {
     vertical-align: middle;
 }
 
+/* MUESTRA DEL PRODUCTO */
+
 .product__detail {
-    margin: 5% 10%;
+    margin: 5% 10% 15% 10%;
 }
 
 .product__pictures {
@@ -42,4 +44,80 @@ img {
 
 .product__description {
     margin-left: 1rem;
+}
+
+#main-picture {
+    width: auto;
+    height: 100%;
+}
+
+.miniature__guide{
+    margin-top: 1rem;
+}
+
+.mini__img__container {
+    width: 15%;
+    border-radius: 5px;
+    margin: 0 10px;
+    padding: 0;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.pictures__miniature {
+    border-radius: 5px;
+}
+
+.mini__img__container > figcaption {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--mustard);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.mini__img__container:hover > figcaption{
+    opacity: 70%;
+}
+
+.mini__img__container > figcaption > i{
+    background: none;
+}
+
+/* CARROUSEL DE LAS FIGURAS DE LA COLECCIÓN */
+
+.buddies__title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-carousel {
+    height: 50%;
+    margin-bottom: 3rem;
+}
+
+.carousel-cell {
+    margin: 0 3rem;
+}
+
+.carousel-cell > img {
+    max-height: 100%;
+}
+
+.carousel-cell span {
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: 700;
+}
+
+.flickity-page-dots {
+    display: none;
 }
