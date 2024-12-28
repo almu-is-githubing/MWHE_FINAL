@@ -98,26 +98,69 @@ img {
 .buddies__title {
     text-align: center;
     margin-bottom: 2rem;
-}
-
-.main-carousel {
-    height: 50%;
-    margin-bottom: 3rem;
-}
-
-.carousel-cell {
-    margin: 0 3rem;
-}
-
-.carousel-cell > img {
-    max-height: 100%;
-}
-
-.carousel-cell span {
     font-family: "Fuzzy Bubbles", serif;
     font-weight: 700;
 }
 
+.main-carousel {
+    height: 60vh;
+    margin: 5% 10%;
+}
+
+.carousel-cell {
+    margin: 0 3rem;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.card__buddies {
+    height: 100%; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    overflow: hidden; 
+    padding: 0.5rem; 
+    box-sizing: border-box; 
+}
+
+.card__buddies > img {
+    width: 100%; 
+    height: auto; 
+    max-height: 85%; 
+    object-fit: cover; 
+}
+
+.buddies__name {
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
 .flickity-page-dots {
     display: none;
+}
+
+.flickity-button {
+    background: transparent;
+}
+
+.flickity-button:hover {
+    background: transparent;
+}
+
+.flickity-button-icon {
+    fill: var(--black);
+    transition: 0.2s ease-in-out;
+}
+
+.flickity-button:hover .flickity-button-icon {
+    fill: var(--mustard);
 }
