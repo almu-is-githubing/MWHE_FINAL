@@ -93,6 +93,32 @@ img {
     background: none;
 }
 
+/* DESCRIPCIÓN DEL PRODUCTO */
+
+.product__name {
+    display: flex;
+    align-items: center;
+}
+
+.product__name > h2 {
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: 700;
+}
+
+#corazon {
+    font-size: 1.7rem;
+    color: var(--mustard);
+    cursor: pointer;
+    margin: 0 1rem .4rem 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+#corazon:hover {
+    color: var(--orange);
+}
+
+
+
 /* CARROUSEL DE LAS FIGURAS DE LA COLECCIÓN */
 
 .buddies__title {
@@ -163,4 +189,5 @@ img {
 
 .flickity-button:hover .flickity-button-icon {
     fill: var(--mustard);
+    background: transparent;
 }

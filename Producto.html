@@ -8,7 +8,7 @@
          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
         <!-- FAVICON------- -->
-        <link rel="shortcut icon" href="img/img-usuario/favicon.png" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="img/img-usuario/favicon.png" type="image/x-icon"> -->
 
         <!-- REMIX ICONS------- -->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -121,16 +121,23 @@
                                 <i class="fa-regular fa-heart" id="corazon"></i>
                             </div>
 
-                            <h2 class="price"></h2>
-
+                            <span id="unit-price" data-price="15">15,00</span> €
+                                
                             <div class="product__option">
-                                <span class="single">Single Box</span>
+                                <span class="single">Caja Individual</span>
 
-                                <span class="set">Whole Set</span>
+                                <span class="set">Set Completo</span>
                             </div>
 
                             <div class="product__quantity">
+                                <label for="quantity">Cantidad:</label>
+                                <input type="number" id="quantity" min="1" value="1">
+                            </div>
 
+                            
+                            <div>
+                                <span>Total:</span>
+                                <span id="total-price">15</span> €
                             </div>
 
                             <span id="cart">Add to cart</span>
@@ -139,39 +146,109 @@
                         <div class="accordion" id="product-accordion">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                         Detalles
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+
+                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        <p>Marca: Hirono</p>
+
+                                        <p>Tamaño: Aproximadamente 8cm</p>
+
+                                        <p>Material: PVC/ABS/Polyester</p>
+
+                                        <p>Un set completo contiene 6 blind boxes</p>
+
+                                        <p>(Si se compra un set completo no habrá figuras repetidas)</p>
                                     </div>
                                 </div>
                             </div>
+
             
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Accordion Item #2
+                                        Distribución
                                     </button>
                                 </h2>
+
                                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            <strong>Envío:</strong>
+                                            <p>Envío estándar (15-30 días laborables)</p>
+                                            <p>Envío acelerado (3-7 días hábiles)</p>
+                                            <p>Los gastos de envío variarán en base al lugar de destino.</p>
                                     </div>
                                 </div>
                             </div>
+
             
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Accordion Item #3
+                                        Política de devolución
                                     </button>
                                 </h2>
+
                                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            <strong>Defectos:</strong>
+                                            <p>1. Los artículos limitados no tienen servicio de cambio. Si encuentra un defecto grave en el artículo, comuníquese con support@hirono.com, con el número de pedido relacionado y el video de desembalaje de la figura dentro de los cinco (5) días posteriores a la recepción del producto.</p>
+                                            <p>2. Por razones de seguridad de la información, contáctenos con la dirección de correo electrónico que utilizó para realizar el pedido. Un representante de atención al cliente se comunicará con usted y lo ayudará a resolver el problema.</p>
+                                            <p>3. Para evitar disputas relacionadas con reembolsos o cambios, se recomienda a los clientes que se graben en video abriendo el paquete. La grabación debe completarse a más tardar dos días después de la entrega. Un vídeo debe mostrar claramente la hoja de envío, el estado del paquete y los defectos del producto.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Métodos de pago
+                                    </button>
+                                </h2>
+
+                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <i class="fa-brands fa-cc-visa"></i>
+                                        <i class="fa-brands fa-cc-mastercard"></i>
+                                        <i class="fa-brands fa-cc-paypal"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        ¡Reglas del juego!
+                                    </button>
+                                </h2>
+                                
+                                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div>
+                                            <strong>¿Qué es una Blind Box?</strong>
+                                            <p>Una "Blind Box" o "Juguete Sorpresa" contiene una figura aleatoria perteneciente a una colección. Diferentes colecciones tienen diferentes figuras, y no sabrás cuál te ha tocado hasta que la abras.</p>
+                                        </div>
+
+                                        <div>
+                                            <strong>Caja Individual</strong>
+                                            <p>Contiene una figura por cada blind box. Se trata de figuras normales, con una probabilidad de obtener cada una de 1/6</p>
+                                       </div>
+
+                                       <div>
+                                            <strong>Set Completo</strong>
+                                            <p>El set completo incluye 6 blind boxes (sin repeticiones).</p>
+                                        </div>
+                                           
+                                        <div>
+                                            <strong>Edición Especial: Ning Ning</strong>
+                                            <p>La probabilidad de sacar la figura secreta en esta colección es de 1/72.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -179,6 +256,9 @@
                     </div>
                 </div>
             </section>
+
+
+
 
             <section class="collection__buddies" id="collection-buddies">
 

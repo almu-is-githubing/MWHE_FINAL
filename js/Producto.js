@@ -42,3 +42,24 @@ $('#corazon').click(function() {
     $('#corazon').attr('class', 'fa-regular fa-heart');
   }
 });
+
+$(document).ready(function () {
+  $('#quantity').on('input', function () {
+      // Obtener la cantidad seleccionada
+      const quantity = parseInt($(this).val(), 10) || 1; // Por si el usuario deja vacío
+
+      // Obtener el precio unitario
+      const unitPrice = parseFloat($('#unit-price').data('price')) || 0;
+
+      // Calcular el precio total
+      const totalPrice = quantity * unitPrice;
+
+      // Actualizar el campo del precio total
+      $('#total-price').text(totalPrice.toFixed(2)); // Mostrar con 2 decimales
+
+      // Depuración en consola
+      console.log("Cantidad:", quantity);
+      console.log("Precio unitario:", unitPrice);
+      console.log("Precio total:", totalPrice);
+  });
+});
