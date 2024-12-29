@@ -27,7 +27,7 @@
     
 }
 
-/* Estilos generales para la sección */
+/* ---DESCRIPCIÓN HIRONOS--- */
 .descripcion {
     display: flex;
     justify-content: center;
@@ -38,31 +38,48 @@
     color: var(--black);
 }
 
-/* Estilo para el contenedor de la descripción */
 .descripcion-contenido {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide el espacio en dos columnas iguales */
+    grid-template-columns: 1fr 1fr;
     width: 90%;
     height: 90%;
-    gap: 0; /* Elimina el espacio entre las columnas */
+    gap: 0;
 }
 
-/* Estilo para el texto */
 .descripcion-texto {
-    padding: 1em 5em 1em 1em; /* Añade margen interno alrededor del texto */
+    padding: 1em 5em 1em 1em;
     background-color: var(--white);
-    display: flex;               /* Hacemos que el contenedor del texto sea un flexbox */
-    flex-direction: column;      /* Alineamos el contenido en columna */
-    justify-content: center;     /* Centra el contenido verticalmente */
-    align-items: flex-start;     /* Centra el contenido horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
+
+.descripcion-texto b {
+    background-color: var(--white);
+    font-weight: 600;
+}
+
+.descripcion-texto i {
+    background-color: var(--white);
+} 
 
 .descripcion-titulo {
-    font-size: 2.5em;
+    font-size: 3.5em;
     margin-bottom: 10px;
     background-color: var(--white);
     font-family: 'Courier Prime';
-    text-align: left;
+    transition: color 0.3s ease-in-out;
+    line-height: 1em;
+}
+
+.descripcion-titulo:hover {
+    color: var(--orange);
+}
+
+.descripcion-titulo b {
+    font-weight: bold;
+    background-color: var(--white);
 }
 
 .descripcion-parrafo {
@@ -73,39 +90,45 @@
     font-family: 'Geist';
 }
 
-/* Estilo para la imagen */
 .descripcion-imagen {
-    display: flex;              /* Usamos flexbox para centrar la imagen */
-    justify-content: center;    /* Centra la imagen horizontalmente */
-    align-items: center;        /* Centra la imagen verticalmente */
-    overflow: hidden;           /* Asegura que no haya desbordamiento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     background-color: var(--white);
 }
 
 .descripcion-imagen img {
-    max-width: 100%;             /* Limita el tamaño máximo al 100% del contenedor */
-    max-height: 100%;            /* Limita el tamaño máximo al 100% de la altura */
-    object-fit: contain;         /* La imagen se ajusta al contenedor sin recortarse */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     background-color: var(--white);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Media Query para pantallas pequeñas (dispositivos móviles) */
-@media (max-width: 768px) {
-    .descripcion-contenido {
-        grid-template-columns: 1fr; /* Hace que las columnas se apilen en una sola columna */
-        grid-template-rows: auto auto; /* Añade filas para el texto y la imagen */
-        width: 90%; /* Ajusta el ancho en pantallas pequeñas */
-        height: 90%;    }
+.descripcion-imagen img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
 
-    /* Centra el texto en pantallas pequeñas */
+@media (max-width: 800px) {
+    .descripcion-contenido {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        width: 90%;
+        height: 75%;    
+    }
+
     .descripcion-texto {
-        text-align: center; /* Alinea todo el texto al centro */
+        text-align: center;
         padding: 1em;
-        align-items: center; /* Centra el contenido horizontalmente */
+        align-items: center;
+        margin-bottom: 0;
     }
 
     .descripcion-titulo {
-        text-align: center; /* Alinea el título al centro */
+        text-align: center;
+        color: var(--orange);
     }
 
     .descripcion-imagen {
@@ -113,8 +136,8 @@
     }
 
     .descripcion-imagen img {
-        width: 100%; /* La imagen ocupa todo el ancho en pantallas pequeñas */
-        height: auto; /* La altura de la imagen se ajusta automáticamente */
+        width: 100%;
+        height: auto;
         background-color: var(--white);
     }
 }
