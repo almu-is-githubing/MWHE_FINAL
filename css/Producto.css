@@ -26,7 +26,7 @@
 }
 
 body {
-background-color: var(--white);
+    background-color: var(--white);
 }
 
 img {
@@ -43,6 +43,7 @@ img {
 
 .product__detail {
     margin: 5% 10% 15% 10%;
+    color: var(--black);
 }
 
 .product__pictures {
@@ -214,7 +215,7 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: center;
     display: flex;
     justify-content: center;
-    margin: 1rem 0;
+    margin:  0 0 1rem 0;
     background-color: var(--mustard);
     border-radius: 10px;
     cursor: pointer;
@@ -260,7 +261,10 @@ input[type="number"]::-webkit-outer-spin-button {
     box-shadow: none;
 }
 
-
+.total__price__div {
+    font-family: "Geist", serif;
+    display: flex;
+}
 
 /* CARROUSEL DE LAS FIGURAS DE LA COLECCIÓN */
 
@@ -333,4 +337,22 @@ input[type="number"]::-webkit-outer-spin-button {
 .flickity-button:hover .flickity-button-icon {
     fill: var(--mustard);
     background: transparent;
+}
+
+@media (max-width: 1000px) {
+    .product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product__description, .product__pictures {
+        margin: 1.5rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .product__detail {
+        margin: 5% 5% 15% 5%;
+        color: var(--black);
+    }
 }
