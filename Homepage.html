@@ -62,24 +62,38 @@
     
                         <div class="texto__contacto">
                             
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam quisquam magnam possimus ab officia temporibus rerum iste alias consequatur ducimus sapiente, tempore, similique aperiam! Voe quod. 
+                            <p>
+                                ¡Hola! Bienvenido al buzón de Hirono. Aunque siempre intentamos que todos nuestros productos sean perfectos puede ocurrir que hay algún defecto.
+                            </p>
+
+                            <p>
+                                Si ese es tu caso, aquí puedes solicitar una revisión para tu figura. Rellena este formulario y nuestro equipo se pondrá en contacto contigo en breve. Debes proporcionar pruebas de que el daño no se produjo tras abrir la caja, así que recomendamos grabar la apertura del producto por si acaso. ¡Buena Suerte!
                             </p>
     
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa similique nostrum, voluptas perferendis consectetur voluptate nesciunt velit, fugit sequi adipisci aut ullam est accusamus eveniet pariatur quia beatae rerum!
-                            </p>
                         </div>
     
-                        <form>
+                        <form class="formulario__incidencias">
         
-                            <input type="text" name="user_name" id="user_name" placeholder="Nombre y Apellidos">
+                            <input type="text" name="user_name" id="user-name" placeholder="Nombre y Apellidos" required>
     
-                            <input type="email" name="user_email" id="user_email" placeholder="Email">
+                            <input type="email" name="user_email" id="user-email" placeholder="Email" required>
     
-                            <input type="number" name="user_phone" id="user_phone" placeholder="Número de teléfono">
+                            <input type="number" name="order_number" id="order-number" placeholder="Número de teléfono" required>
                             
-                            <input type="text" name="nationality" id="nationality" placeholder="Motivo de contacto">
-    
-                            <a href="#success-msg" id="submit">Enviar</a>
+                            <input type="text" name="reason" id="reason" placeholder="Motivo de contacto" required>
+      
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="submit" disabled>
+                                Enviar
+                            </button>
+                            
+                            <div class="modal fade modal__contacto" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <img src="Resources/Homepage/hirono_modal.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
     
@@ -89,6 +103,10 @@
                     </figure>
     
                 </div>
+
+                  
+                  <!-- Modal -->
+               
 
             </section>            
         </main>

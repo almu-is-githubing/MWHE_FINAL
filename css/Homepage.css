@@ -50,6 +50,7 @@
 #form-contacto > div > figure {
     height: 100%;
     width: auto;
+    margin-bottom: 0;
 }
 
 #form-contacto > div > figure > img {
@@ -57,10 +58,11 @@
     width: auto;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    object-fit: cover;
 }
 
 #form-contacto > div > div {
-    padding: 1.75rem 2rem;
+    padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -82,7 +84,9 @@
     color: var(--white);
     font-family: "Geist", serif;
     font-size: 0.9rem;
+    margin-bottom: 0.5rem;
 }
+
 
 /* FORMULARIO */
 
@@ -98,7 +102,6 @@
 #form-contacto form > input {
     width: 90%;
     background-color: transparent;
-    margin-top: 1.15rem;
     border: none;
     color: var(--white);
     font-family: 'Courier New', Courier, monospace;
@@ -139,11 +142,43 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    margin-top: 1.3rem;
+    margin-top: 1rem;
     transition: 0.3s ease-in-out;
 }
 
 #submit:hover {
     background-color: var(--orange);
     color: var(--white);
+}
+
+.formulario__incidencias > input:not(:first-child){
+    margin-top: 1.15rem;
+}
+
+.modal__contacto:not(.modal-content) {
+    cursor: pointer;
+}
+
+.modal__contacto > .modal-dialog > .modal-content{
+    background: none;
+    border: none;
+    cursor: default;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* FORMULARIO */
+
+    .formulario__incidencias {
+        margin-top: 0.7rem;
+    }
+
+    input::placeholder {
+        font-size: 1rem;
+    }
+
+    #form-contacto {
+        padding: 0;
+        margin: 0;
+    }
+
 }
