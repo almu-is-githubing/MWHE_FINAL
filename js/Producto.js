@@ -87,7 +87,7 @@ $(document).ready(function () {
     $('#quantity').val(1);
 
     const unitPrice = parseFloat($('#unit-price').data('price')) || 0;
-    const formattedPrice = unitPrice.toFixed(2).replace('.', ',') + " €";
+    const formattedPrice = unitPrice.toFixed(2).replace('.', ',') + "€";
     $('#total-price').text(formattedPrice);
   });
 

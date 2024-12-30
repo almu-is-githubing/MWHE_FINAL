@@ -55,7 +55,7 @@
 
             <section id="product-detail" class="product__detail">
 
-                <div class="product row text-align-center" id="product">
+                <div class="product" id="product">
                     <div class="product__pictures col" id="product-pictures">
                         <figure class="row">
                             <img src="Resources/Producto/hirono_product_1.webp" alt="" class="main__picture col" id="main-picture">
@@ -133,18 +133,29 @@
                                 </div>
                             </div>
 
-                            <div class="product__quantity">
-                                <label for="quantity">Cantidad:</label>
-                                <input type="number" id="quantity" min="1" value="1">
+                            <div class="quantity__price">
+                                <div class="product__quantity">
+                                    <label for="quantity">Cantidad:</label>
+                                    <input type="number" id="quantity" min="1" value="1">
+                                </div>
+                            
+                                <div>
+                                    <span>Total:</span>
+                                    <span id="total-price">15,00€</span> 
+                                </div>
                             </div>
+                            
 
                             
-                            <div>
-                                <span>Total:</span>
-                                <span id="total-price">15,00€</span> 
-                            </div>
+                            
 
-                            <span id="cart">Add to cart</span>
+                            <div class="cart__btn">
+                                <div class="cart" id="cart">
+                                    <p>Add to cart</p>
+                                </div>
+                            </div>
+                            
+                            
                         </div>
 
                         <div class="accordion" id="product-accordion">
@@ -157,11 +168,11 @@
 
                                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>Marca: Hirono</p>
+                                        <p><strong>Marca:</strong> Hirono</p>
 
-                                        <p>Tamaño: Aproximadamente 8cm</p>
+                                        <p><strong>Tamaño:</strong> Aproximadamente 8cm</p>
 
-                                        <p>Material: PVC/ABS/Polyester</p>
+                                        <p><strong>Material:</strong> PVC/ABS/Polyester</p>
 
                                         <p>Un set completo contiene 6 blind boxes</p>
 

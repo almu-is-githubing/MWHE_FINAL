@@ -37,6 +37,10 @@ img {
 
 /* MUESTRA DEL PRODUCTO */
 
+.product {
+    display: flex;
+}
+
 .product__detail {
     margin: 5% 10% 15% 10%;
 }
@@ -52,6 +56,7 @@ img {
 #main-picture {
     width: auto;
     height: 100%;
+    
 }
 
 .miniature__guide{
@@ -166,6 +171,96 @@ img {
     font-weight: 500;
     color: var(--white);
 } 
+
+.quantity__price {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.product__quantity > label {
+    font-family: "Geist", serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.product__quantity > input {
+    border: none;
+    background-color: var(--white);
+    font-family: "Geist", serif;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 20%;
+}
+
+.product__quantity > input:focus {
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    cursor: pointer;
+}
+
+.cart__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart {
+    width: 48%;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    background-color: var(--mustard);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#cart:hover {
+    background-color: var(--orange);
+}
+
+#cart > p {
+    margin: 0;
+    font-family: "Geist", serif;
+    font-weight: 700;
+    color: var(--black);
+    transition: 0.2s ease-in-out;
+}
+
+#cart:hover > p {
+    color: var(--white);
+}
+
+.accordion,.accordion-item,.accordion-button {
+    background-color: var(--white);
+    border: none;
+    border-bottom: 1px solid var(--grey);
+    font-family: "Geist", serif;
+    transition: 0.2s ease-in-out;
+}
+
+.accordion-button:hover {
+    color: var(--mustard);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--white);
+    color: var(--orange);
+    font-weight: 500;
+}
+
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
 
 /* CARROUSEL DE LAS FIGURAS DE LA COLECCIÓN */
 
