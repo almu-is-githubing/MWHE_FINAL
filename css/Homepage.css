@@ -1,16 +1,16 @@
 
 /* <!-- GOOGLE FONTS------ --> */
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Fuzzy+Bubbles:wght@400;700&family=Geist:wght@100..900&display=swap');
+
 
 /* VARIABLES DE COLORES */
 :root {
-    --dark__pink: #B74140;
-    --pink: #FA6674;
-    --light__pink: #FCB6BC;
-    --white: #FDFFFE;
-    --beige: #FBE9CB;
-    --caramel: #F0BF87;
+    --light__orange: #E4B352;
+    --orange: #E19600;
+    --white: #F8F8F8;
+    --grey: #DBDBDB;
+    --dark: #1F2120;
 }
 
 
@@ -20,7 +20,248 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "EB Garamond", serif;
+    font-family: "Geist";
     scroll-behavior: smooth;
-    background-color: #ffefef;
+}
+
+/* ---------HEADER Y MENÚ----------- */
+
+header {
+    height: calc(100vh);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--dark);
+    background-attachment: fixed;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+}
+
+#menu {
+    position: sticky;
+    z-index: 100;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    background-color: var(--white);
+    border-radius: 0 0 15px 15px;
+}
+
+#menu > div {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+}
+
+#menu > div > i,
+#menu > div > ul > li:last-child {
+    display: none;
+}
+
+#menu > div > ul {
+    width: 100%;
+    height: 3em;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu > div > ul > li {
+    list-style: none;
+    width: 5%;
+    margin-left: 1.5%;
+    display: flex;
+    justify-content: center;
+}
+
+#menu > div > ul > li:first-child > a {
+    display: flex;
+    justify-content: center;
+}
+
+#menu > div > ul > li:first-child > a > img {
+    height: 2em;
+    width: auto;
+}
+
+#menu > div > i,
+#menu > div > ul > li > a,
+#menu > div > i {
+    color: var(--dark);
+}
+
+#menu > div > ul > li > a {
+    font-size: 1em;
+    color: var(--dark);
+    text-decoration: none;
+    font-family: 'Geist';
+    font-weight: 600;
+}
+
+#close-icon {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.5em;
+    display: none;
+}
+
+#menu-hamburguer {
+    color: var(--dark);
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+#menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+#menu-items {
+    left: -100%;
+}
+
+#menu-items.show {
+    left: 0;
+    transition: left 0.5s ease-in-out;
+}
+
+.menu-link {
+    color: var(--dark);
+    font-size: 1em;
+}
+
+.menu-link:hover {
+    color: var(--light__orange) !important;
+    transition: 0.5s ease;
+}
+
+
+.logo img {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ---------- MEDIA QUERYS -------------- */
+
+@media screen and (max-width: 1200px) {
+
+    /* ---------- HEADER ----------- */
+
+    /* --------------------- MENÚ -------------------- */
+
+    #menu {
+        width: 8%;
+        margin: 1%;
+    }
+
+    #menu > div {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #menu > div > i {
+        display: block;
+        cursor: pointer;
+    }
+
+    #menu > div > ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        padding: 20% 0;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--dark);
+        transition-duration: 1s;
+    }
+
+    #menu > div > ul > li {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    #menu > div > ul > li > a {
+        text-decoration: none;
+        font-size: 2em;
+    }
+
+    #menu > div > ul > li:last-child {
+        display: block;
+        position: absolute;
+        right: 2em;
+        top: 2em;
+    }
+
+    #menu > div > ul > li:last-child > i {
+        color: var(--grey);
+    }
+
+    #menu > div > ul > li > a {
+        color: var(--white);
+    }
+
+    #menu-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 0 auto;
+    }
+    
+    #close-icon {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    /* ---MENU --- */
+    
+    #menu {
+        width: 10%;
+        margin: 2%;
+    }
+
+    #menu > div > ul {
+        padding: 10% 0;
+    }
+
+    .menu-link {
+        font-size: 3.5rem;
+        color: white;
+        padding-left: 1rem;
+    }
+
+    #menu-items {
+        padding-top: 0;
+    }
+
+    #close-icon {
+        font-size: 2.5rem;
+        left: 0.8rem;
+    }
 }
