@@ -9,9 +9,10 @@ $(document).ready(function () {
       cellAlign: 'center',
       contain: true,
       wrapAround: true,
-    });
+  });
 
-    // SELECCIÓN DE FOTOS 
+
+  // SELECCIÓN DE FOTOS 
 
   $('#product-1').click(function(){
       $('#main-picture').attr('src', 'Resources/Producto/hirono_product_1.webp');
@@ -37,6 +38,7 @@ $(document).ready(function () {
     $('#main-picture').attr('src', 'Resources/Producto/hirono_box_2.webp');
   });
 
+
   // AÑADIR A FAVORITOS
 
   $('#corazon').click(function() {
@@ -47,28 +49,37 @@ $(document).ready(function () {
     }
   });
 
+
+  // SELECCIONAR MÉTODO DE PAGO
+
+  $(".payment__icons").click(function () {
+
+    if ($(this).hasClass("chosen__payment__method")) {
+      $(this).removeClass("chosen__payment__method");
+    } else {
+      $(".icon").removeClass("chosen__payment__method");
+      $(this).addClass("chosen__payment__method");
+    }
+  });
+
+  
   // CÁLCULO DEL PRECIO
 
-
   $('#quantity').on('input', function () {
-    // Obtener la cantidad seleccionada
-    const quantity = parseInt($(this).val(), 10) || 1; // Por si el usuario deja vacío
 
-    // Obtener el precio unitario
+    const quantity = parseInt($(this).val(), 10) || 1;
+
     const unitPrice = parseFloat($('#unit-price').data('price')) || 0;
 
-    // Calcular el precio total
     const totalPrice = quantity * unitPrice;
 
-    // Formatear el precio total con coma y símbolo del euro
     const formattedPrice = totalPrice.toFixed(2).replace('.', ',') + " €";
 
-    // Actualizar el campo del precio total
     $('#total-price').text(formattedPrice);
   });  
 
-  // SELECCIONAR OPCIÓN DE PRODUCTO
 
+  // SELECCIONAR OPCIÓN DE PRODUCTO
 
   $('.single, .set').click(function () {
 

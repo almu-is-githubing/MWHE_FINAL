@@ -1,17 +1,37 @@
 console.log("hello world");
 
 $(document).ready(function () {
+
+  // COMPROBACIÓN DEL FORMULARIO
     const $form = $(".formulario__incidencias");
     const $submitButton = $("#submit");
   
     $form.on("input", function () {
-      // Verifica si todos los campos son válidos
+
       const allFieldsFilled = $form
         .find("input, textarea")
         .toArray()
         .every((input) => input.checkValidity());
   
-      // Habilita o deshabilita el botón según el estado de los campos
       $submitButton.prop("disabled", !allFieldsFilled);
+
     });
+
+    // CAMBIAR RUTA IMAGEN FORMULARIO EN RESPONSIVE
+    function updateImageSource() {
+      const $image = $(".contact__form__img"); 
+  
+      if ($(window).width() < 1000) {
+        $image.attr("src", "Resources/Homepage/hirono_prince_contacto_responsive.webp"); 
+      } else {
+        $image.attr("src", "Resources/Homepage/hirono_prince_contacto.webp");
+      }
+    }
+    
+    updateImageSource();
+  
+    $(window).resize(function () {
+      updateImageSource();
+    });
+
   });

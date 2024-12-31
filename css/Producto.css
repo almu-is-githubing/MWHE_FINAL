@@ -261,6 +261,27 @@ input[type="number"]::-webkit-outer-spin-button {
     box-shadow: none;
 }
 
+.payment__div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.payment__div > .payment__icons {
+    font-size: 4rem;
+    margin: 0.5rem;
+    transition: 0.3s ease-in-out;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.payment__div > .payment__icons:hover {
+    color: var(--orange);
+}
+
+.payment__icons.chosen__payment__method {
+    color: var(--mustard);
+}
+
 .total__price__div {
     font-family: "Geist", serif;
     display: flex;
