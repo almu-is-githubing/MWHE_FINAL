@@ -21,7 +21,7 @@ $(document).ready(function () {
     function updateImageSource() {
       const $image = $(".contact__form__img"); 
   
-      if ($(window).width() < 1000) {
+      if ($(window).width() < 985) {
         $image.attr("src", "Resources/Homepage/hirono_prince_contacto_responsive.webp"); 
       } else {
         $image.attr("src", "Resources/Homepage/hirono_prince_contacto.webp");
