@@ -26,18 +26,6 @@
 
 /* ---------MENÚ----------- */
 
-header {
-    height: calc(100vh);
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    background-color: var(--dark);
-    background-attachment: fixed;
-    flex-direction: column;
-    z-index: 1;
-    position: relative;
-}
-
 #menu {
     position: sticky;
     top: 0;
@@ -78,7 +66,7 @@ header {
     width: 5%;
     margin-left: 1.5%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #menu > div > ul > li:first-child > a {
@@ -145,7 +133,6 @@ header {
     transition: 0.5s ease;
 }
 
-
 .logo img {
     width: auto;
     height: 100%;
@@ -155,6 +142,89 @@ header {
 
 /* ---------HEADER----------- */
 
+header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--dark);
+    background-attachment: fixed;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+}
+
+#header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Alinea el contenido al centro */
+    overflow: hidden; /* Evita el desbordamiento */
+    flex-wrap: wrap;
+    min-height: 100%;
+    padding: 0 2%;
+}
+
+.header__content img {
+    max-width: 100%; /* Las imágenes no deben salirse del contenedor */
+    height: auto;
+    object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
+    max-height: 80vh; 
+}
+
+.header-text-properties {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-text-properties h1 {
+    color: var(--grey);
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: bold;
+    font-size: 4rem;
+    word-wrap: break-word;
+}
+
+.header-text-properties p {
+    color: var(--grey);
+    font-family: 'Courier Prime', serif;
+    font-size: medium;
+    word-wrap: break-word;
+}
+
+.img-border-radius-header {
+    border-radius: 10px;
+}
+
+.btn-header-propiedades-nuestras {
+    transition: 0.5s ease;
+    font-family: "Geist", serif;
+    background-color: var(--light__orange);
+    border-radius: 5px;
+    border-style: none;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.btn-header-propiedades-nuestras:hover {
+    transition: 0.5s ease;
+    background-color: var(--orange);
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.header-card-figura-bg {
+    background-color: hsla(0, 0%, 97%, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: solid 1px var(--grey);
+    margin: 0;
+}
+
+.header-padding-propio {
+    padding: 0 10%;
+}
 
 /* ---------- MEDIA QUERYS -------------- */
 
@@ -185,7 +255,7 @@ header {
         width: 100%;
         height: 100vh;
         z-index: 1;
-        padding: 20% 0;
+        padding: 15% 0;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -200,13 +270,12 @@ header {
 
     #menu > div > ul > li > a {
         text-decoration: none;
-        font-size: 2em;
+        font-size: 4rem;
     }
 
     #menu > div > ul > li:last-child {
         display: block;
         position: absolute;
-        right: 2em;
         top: 2em;
     }
 
@@ -239,6 +308,10 @@ header {
 
     /* ---------HEADER----------- */
 
+    .header-text-properties h1 {
+        font-size: 3rem;
+    }
+
 }
 
 @media screen and (max-width: 750px) {
@@ -250,13 +323,22 @@ header {
     }
 
     #menu > div > ul {
-        padding: 10% 0;
+        padding: 25% 0;
+    }
+
+    #menu > div > ul > li:last-child {
+        right: 1rem;
+    }
+
+    #menu > div > ul > li > a {
+        text-decoration: none;
+        font-size: 2.5rem;
     }
 
     .menu-link {
         font-size: 3.5rem;
         color: white;
-        padding-left: 1rem;
+        padding-left: 2.5rem;
     }
 
     #menu-items {
@@ -265,10 +347,42 @@ header {
 
     #close-icon {
         font-size: 2.5rem;
-        left: 0.8rem;
     }
 
     /* ---------HEADER----------- */
+    .header-text-properties h1 {
+        font-size: 2rem;
+    }
 
+    .header-text-properties p {
+        font-size: small;
+    }
 
+}
+
+@media screen and (max-width: 575px) {
+
+    /* ---------HEADER----------- */
+    .header__content img {
+        max-width: 80%;
+        max-height: 40vh; 
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    /* ---------MENU----------- */
+    #menu > div > ul > li > a {
+        font-size: 2rem;
+    }
+
+    #menu > div > ul {
+        padding: 40% 0;
+    }
+
+    .menu-link {
+        padding-left: 1.75rem;
+    }
+    
 }
