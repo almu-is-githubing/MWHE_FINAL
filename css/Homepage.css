@@ -1,16 +1,15 @@
 
 /* <!-- GOOGLE FONTS------ --> */
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
 /* VARIABLES DE COLORES */
 :root {
-    --dark__pink: #B74140;
-    --pink: #FA6674;
-    --light__pink: #FCB6BC;
-    --white: #FDFFFE;
-    --beige: #FBE9CB;
-    --caramel: #F0BF87;
+    --mustard: #E4B352;
+    --orange: #E19600;
+    --white: #F8F8F8;
+    --grey: #DBDBDB;
+    --black: #1F2120;
 }
 
 
@@ -20,13 +19,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "EB Garamond", serif;
+    font-family: "Geist", serif;
     scroll-behavior: smooth;
 }
 
 /* FOOTER */
 .footer_footerContainer {
     background-color: #1F2120;
+}
+
+.footer_title,
+.footer_socialTitle {
+    color: var(--white);
+    font-size: .73vw;
+    font-weight: 700;
+}
+
+.footer_desc {
+    color: #676767;
+    margin-top: .625vw;
+    font-size: .73vw;
+}
+
+.footer_chatInput {
+    margin-top: .625vw;
+    width: 22.13542vw;
+    height: 1.97917vw;
+    background: var(--white);
+}
+
+.footer_socialTitle {
+    margin-top: 1.25vw;
 }
 
 .footer_mainInfo {
@@ -47,10 +70,11 @@
 }
 
 .footer_menuTitle {
-    color: #fff;
+    color: var(--white);
     overflow: hidden;
     white-space: nowrap;
     font-size: .72917vw;
+    font-weight: 700;
     line-height: .9375vw;
 }
 
