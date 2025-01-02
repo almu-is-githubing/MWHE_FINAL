@@ -85,6 +85,11 @@
     border: 2px solid #dee2e6;
 }
 
+.gallery img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen cuando se pasa el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra suave al pasar el ratón */
+}
+
 .instagram-link {
     margin-top: 20px;
     text-align: center;
@@ -115,6 +120,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregado para animar el hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hace que la tarjeta suba ligeramente al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta el sombreado cuando está en hover */
 }
 
 .card-img-top {
@@ -123,7 +134,62 @@
     object-fit: cover; /* Hace que la imagen se ajuste al tamaño sin perder su proporción */
 }
 
-/* Asegura que el texto esté centrado dentro de las tarjetas */
 .card-body {
     text-align: center;
+}
+
+
+
+
+
+/* COLABORACIONES */
+
+
+.card_collab {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;  /* Esto asegura que todo dentro de la tarjeta siga el borde redondeado */
+}
+
+.card_collab:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    object-fit: cover;
+    width: 100%;  /* Hace que la imagen se ajuste al contenedor */
+    height: 0;
+    padding-top: 56.25%; /* Mantiene la relación de aspecto 16:9 (1080/1920 = 0.5625) */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #444;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
 }
