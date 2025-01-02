@@ -22,5 +22,79 @@
     box-sizing: border-box;
     font-family: "EB Garamond", serif;
     scroll-behavior: smooth;
-    background-color: #ffefef;
+}
+
+/* FOOTER */
+.footer_footerContainer {
+    background-color: #1F2120;
+}
+
+.footer_mainInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3.125vw calc((100vw - 75vw) / 2) 1.25vw;
+}
+
+.footer_menuBloque {
+    max-width: 39.58333vw;
+    height: fit-content;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(5.21vw, 8.85vw));
+    justify-content: end;
+    gap: 1.25vw;
+}
+
+.footer_menuTitle {
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: .72917vw;
+    line-height: .9375vw;
+}
+
+.footer_menuTextTitle > a {
+    text-decoration: none;
+    margin-top: .83333vw;
+    cursor: pointer;
+    color: #676767;
+    overflow: hidden;
+    font-size: .72917vw;
+    line-height: .9375vw;
+    list-style: none;
+}
+
+.footer_footerContainer
+.fotter_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.255vw 0;
+    border-top: 1px solid #676767;
+}
+
+.footer_footerContainer
+.fotter_bottom 
+.footer_copyRight {
+    font-size: .625vw;
+    color: #676767;
+    text-align: center;
+}
+
+.footer_footerContainer
+.fotter_bottom 
+.footer_creditCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.83vw;
+}
+
+.footer_image {
+    width: 2.3vw;
+    height: 1.45vw;
 }
