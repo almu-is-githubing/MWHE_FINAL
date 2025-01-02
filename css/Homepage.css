@@ -85,6 +85,22 @@
     border: 2px solid #dee2e6;
 }
 
+.img-container {
+    width: 100%;
+    height: 0;
+    padding-top: 100%; /* Esto mantiene la relación de aspecto 1:1 */
+    position: relative;
+}
+
+.img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto asegura que la imagen cubra todo el contenedor sin distorsionarse */
+}
+
 .gallery img:hover {
     transform: scale(1.1); /* Aumenta el tamaño de la imagen cuando se pasa el ratón */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra suave al pasar el ratón */
@@ -120,76 +136,159 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregado para animar el hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 350px;  /* Altura total de la tarjeta */
+    display: flex;
+    flex-direction: column;  /* Asegura que los elementos dentro de la tarjeta se apilen verticalmente */
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Hace que la tarjeta suba ligeramente al pasar el ratón */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta el sombreado cuando está en hover */
-}
-
-.card-img-top {
-    width: 100%;
-    height: 300px; /* Tamaño fijo para hacer las imágenes cuadradas */
-    object-fit: cover; /* Hace que la imagen se ajuste al tamaño sin perder su proporción */
-}
-
-.card-body {
-    text-align: center;
-}
-
-
-
-
-
-/* COLABORACIONES */
-
-
-.card_collab {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;  /* Esto asegura que todo dentro de la tarjeta siga el borde redondeado */
-}
-
-.card_collab:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Asegura que las imágenes sean cuadradas y se ajusten bien dentro de la tarjeta */
 .card-img-top {
+    width: 100%;
+    height: 200px;  /* Altura de la imagen */
     object-fit: cover;
-    width: 100%;  /* Hace que la imagen se ajuste al contenedor */
-    height: 0;
-    padding-top: 56.25%; /* Mantiene la relación de aspecto 16:9 (1080/1920 = 0.5625) */
+    border-bottom: 2px solid #ddd; /* Línea divisoria entre la imagen y el contenido */
+}
+
+/* Estilos del contenido dentro de la tarjeta */
+.card-body {
+    text-align: center;
+    padding: 10px 20px;  /* Reducimos el padding superior e inferior */
+    margin-bottom: 0;  /* Eliminamos cualquier margen inferior para evitar la franja blanca */
+    flex-grow: 1;  /* Hace que el contenido crezca para llenar el espacio disponible */
 }
 
 .card-title {
-    font-size: 1.25rem;
-    color: #444;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .card-text {
     font-size: 1rem;
-    color: #666;
+    margin-top: 5px;  /* Reducimos el espacio superior entre el título y el texto */
+    color: #555;
 }
 
-.card-body {
-    padding: 1.5rem;
-}
-
+/* Media queries para hacerla responsiva */
 @media (max-width: 768px) {
-    h2 {
-        font-size: 2rem;
+    .card {
+        height: 300px; /* Ajustamos la altura de la tarjeta en pantallas más pequeñas */
+    }
+
+    .card-img-top {
+        height: 150px; /* Reducimos la altura de la imagen */
+    }
+
+    .card-body {
+        padding: 5px 15px;  /* Reducimos el relleno en pantallas pequeñas */
+    }
+}
+
+
+
+
+/* Estilos generales para las tarjetas de colaboración */
+.card_collab {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;  /* Los elementos se apilan verticalmente */
+    background-color: #fff;
+    height: 100%;  /* Asegura que las tarjetas ocupen todo el alto disponible */
+}
+
+/* Efecto hover para las tarjetas */
+.card_collab:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el cuerpo de la tarjeta (donde va el texto) */
+.card-body {
+    padding: 15px;
+    background-color: #f9f9f9;
+    text-align: center;
+    flex-grow: 1;
+    border-bottom: 2px solid #ddd;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;  /* Espacio entre el título y el texto */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilos para la imagen de la tarjeta (vertical) */
+.card-img-bottom {
+    width: 100%;
+    height: 200px;  /* Ajustamos la altura de la imagen para que sea proporcional */
+    object-fit: cover;
+    border-top: 2px solid #ddd;  /* Línea divisoria entre el contenido y la imagen */
+    margin-top: 10px;  /* Espacio entre el contenido y la imagen */
+}
+
+/* Media queries para hacer la tarjeta responsiva */
+@media (max-width: 768px) {
+    .card_collab {
+        height: 350px;  /* Ajustamos la altura total de la tarjeta para pantallas más pequeñas */
+    }
+
+    .card-img-bottom {
+        height: 180px; /* Ajustamos la altura de la imagen */
+    }
+
+    .card-body {
+        padding: 10px 15px;  /* Reducimos el relleno en pantallas pequeñas */
     }
 
     .card-title {
-        font-size: 1.1rem;
+        font-size: 1.1rem;  /* Reducimos el tamaño de la fuente en pantallas pequeñas */
     }
 
     .card-text {
-        font-size: 0.9rem;
+        font-size: 0.9rem;  /* Reducimos el tamaño de la fuente en pantallas pequeñas */
     }
+}
+
+/* Media query para pantallas extra pequeñas (menor de 576px) */
+@media (max-width: 576px) {
+    .card_collab {
+        height: 300px;  /* Ajustamos la altura total de la tarjeta para pantallas muy pequeñas */
+    }
+
+    .card-img-bottom {
+        height: 150px; /* Ajustamos la altura de la imagen */
+    }
+
+    .card-title {
+        font-size: 1rem;  /* Ajustamos aún más el tamaño de la fuente */
+    }
+
+    .card-text {
+        font-size: 0.85rem;  /* Ajustamos el tamaño de la fuente */
+    }
+}
+
+
+#colaboraciones p {
+    font-size: 1.1rem; /* Tamaño de fuente adecuado */
+    color: #555;  /* Color de texto ligeramente más claro */
+    max-width: 800px;  /* Ancho máximo del párrafo */
+    margin: 0 auto;  /* Centrado del texto */
+    line-height: 1.6;  /* Mayor espacio entre líneas para mejor lectura */
+    padding: 0 15px;  /* Añadir un poco de espacio a los lados */
 }
