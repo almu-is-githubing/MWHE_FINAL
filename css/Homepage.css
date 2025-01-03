@@ -226,6 +226,42 @@ header {
     padding: 0 10%;
 }
 
+/* --------COLECCIONES------------- */
+.collections-custom-properties {
+    background-color: var(--dark);
+    color: var(--grey);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-hirono-collection1 {
+    background-image: url('/Resources/');
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white; /* Texto blanco para destacar en el fondo */
+    padding: 20px; /* Espaciado interno */
+}
+
+.main-hirono-collection2 {
+    background-image: url('/Resources/');
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white; /* Texto blanco para destacar en el fondo */
+    padding: 20px; /* Espaciado interno */
+}
+
+.main-hirono-collection3 {
+    background-image: url('/Resources/');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+}
+
 /* ---------- MEDIA QUERYS -------------- */
 
 @media screen and (max-width: 1200px) {
