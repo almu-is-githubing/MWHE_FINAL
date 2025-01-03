@@ -17,8 +17,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
         <!-- CSS------- -->
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
-        <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="css/Homepage.css">
 
         <title>Hirono</title>
@@ -85,26 +85,26 @@
                         <button type="button" class="btn btn-lg btn-primary btn-header-propiedades-nuestras">Comprar ahora</button>
                       </div>
                       <!-- Fila de Hironos -->
-                        <div class="container-fluid text-center pb-3">
+                        <div class="container-fluid text-center pb-3" data-aos="fade-up">
                             <div class="row justify-content-center">
                                 <div class="col-6 col-sm-3 mb-3">
                                     <div class="header-card-figura-bg">
-                                        <img src="./Resources/imgs/Hirono_birdy.png" class="img-fluid" alt="">
+                                        <img src="./Resources/imgs/Hirono_birdy.png" class="img-fluid" alt="Hirono birdy">
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-3 mb-3">
                                     <div class="header-card-figura-bg">
-                                        <img src="./Resources/imgs/Hirono_Harry.png" class="img-fluid" alt="">
+                                        <img src="./Resources/imgs/Hirono_Harry.png" class="img-fluid" alt="Hirono x Keith Haring">
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-3 mb-3">
                                     <div class="header-card-figura-bg">
-                                        <img src="./Resources/imgs/Hirono_Principito.png" class="img-fluid" alt="">
+                                        <img src="./Resources/imgs/Hirono_Principito.png" class="img-fluid" alt="Hirono x El principito">
                                     </div>
                                 </div>
                                 <div class="col-6 col-sm-3 mb-3">
                                     <div class="header-card-figura-bg">
-                                        <img src="./Resources/imgs/Hirono_Simper.png" class="img-fluid" alt="">
+                                        <img src="./Resources/imgs/Hirono_Simper.png" class="img-fluid" alt="Hirono Simper">
                                     </div>
                                 </div>
                             </div>
@@ -115,9 +115,9 @@
       
         </header>
 
-        <!-- MAIN------- -->
+        <!------ MAIN------- -->
         <main class="main">
-
+            <!-------- COLECCIONES------- -->
             <section id="colecciones-bigcontainer">
                 <div class="container-fluid text-center">
                     <div class="col-12 mb-4 text-md-start text-sm-center collections-title-text ps-3">
@@ -159,32 +159,134 @@
 
             </section>
 
-            <!-- <section id="info-specs-bigcontainer">
+            <!-------- ESPECIFICACIONES ------- -->
+            <section id="info-specs-bigcontainer">
                 <div class="container-fluid text-center">
+                    <div class="col-12 mb-5 text-md-start text-sm-center collections-title-text ps-3">
+                        <h3>Especificaciones</h3>
+                        <p>Información detallada del producto</p>
+                    </div>
+
                     <div class="row">
-                      <div class="col-sm-6 mb-6">
-                        <img src="./Resources/" class="img-fluid project-img-cover" alt="">
-                      </div>
-                      <div class="col-sm-6 mb-6">
-                        
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <div class="accordion-item">
-                                <h4 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed toggle-icon d-flex align-items-center text-end" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                        <h4 class="accordion-header accordion-title" id="flush-headingOne">
-                                            Título
-                                        </h4>
-                                    </button>
-                                </h4>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body d-flex align-items-center text-end">Párrafo de texto interior</div>
+                        <!-- CARRUSEL (COL-IZQUIERDA) -->
+                        <div class="col-sm-12 col-md-6 mb-4 mb-md-0">
+                            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-ride="carousel" data-bs-interval="4000">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="./Resources/imgs/Medida-Small-Hirono.jpg" class="d-block w-100" alt="Medidas Hirono pequeño_8cm">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./Resources/imgs/Medida-Medium-Hirono.jpg" class="d-block w-100" alt="Medidas Hirono mediano_15cm">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="./Resources/imgs/Medida-Big-Hirono.jpg" class="d-block w-100" alt="Medidas Hirono grande_17,5cm">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Atrás</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon color-arrow-carousel" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Siguiente</span>
+                                </button>
                             </div>
                         </div>
+                        <!-- ACORDEÓN (COL-DERECHA) -->
+                        <div class="col-sm-12 col-md-6">
 
-                      </div>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header" id="flush-headingFour">
+                                        <button class="accordion-button collapsed toggle-icon d-flex align-items-center text-start" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                            
+                                            <h4 class="accordion-header accordion-title" id="flush-headingFour">
+                                                Envío y servicio
+                                            </h4>
+                                        </button>
+                                    </h4>
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body d-flex align-items-center text-start"><ul class="acordion-ul-interior">
+                                            <li>1. Envío:
+                                                Envío estándar (15-30 días laborables)
+                                                Envío urgente (3-7 días laborables)</li>
+                                            <li>2. Defectos:
+                                                (1) Los artículos limitados no tienen servicio de cambio. Si encuentra un defecto grave en el artículo, póngase en contacto con support@popmart.com, con el número de pedido relacionado y el vídeo de desembalaje de la figurita en un plazo de cinco (5) días a partir de la recepción del producto.
+                                                (2)Por razones de seguridad de la información, póngase en contacto con nosotros con la dirección de correo electrónico que utilizó para realizar el pedido. Un representante del servicio de atención al cliente se pondrá en contacto con usted y le ayudará a resolver el problema.
+                                                (3)Con el fin de evitar cualquier disputa relativa a reembolsos o cambios, se recomienda a los clientes que se graben a sí mismos abriendo el paquete. La grabación
+                                                La grabación en vídeo debe realizarse a más tardar dos días después de la entrega. Un vídeo debe mostrar claramente la hoja de envío, el estado del paquete y los defectos del producto.</li>
+                                            <li>3. Impuestos:
+                                                En el caso de los envíos urgentes internacionales, el comprador correrá con los gastos de derechos de aduana</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed toggle-icon d-flex align-items-center text-start" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            
+                                            <h4 class="accordion-header accordion-title" id="flush-headingOne">
+                                                Tamaño pequeño
+                                            </h4>
+                                        </button>
+                                    </h4>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body d-flex align-items-center text-start flex-direction-column">
+                                            <ul class="acordion-ul-interior">
+                                                <li>Marca: Hirono</li>
+                                                <li>Tamaño: Altura aprox. 8 cm</li>
+                                                <li>Material: PVC/ABS</li>
+                                            </ul>
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header" id="flush-headingTwo">
+                                        <button class="accordion-button collapsed toggle-icon d-flex align-items-center text-start" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            
+                                            <h4 class="accordion-header accordion-title" id="flush-headingTwo">
+                                                Tamaño mediano
+                                            </h4>
+                                        </button>
+                                    </h4>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body d-flex align-items-center text-start">
+                                            <ul class="acordion-ul-interior">
+                                                <li>Marca: Hirono</li>
+                                                <li>Tamaño: Altura aprox. 15 cm</li>
+                                                <li>Material: PVC/ABS</li>
+                                            </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h4 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed toggle-icon d-flex align-items-center text-start" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                            
+                                            <h4 class="accordion-header accordion-title" id="flush-headingThree">
+                                                Tamaño grande
+                                            </h4>
+                                        </button>
+                                    </h4>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body d-flex align-items-center text-start"><ul class="acordion-ul-interior">
+                                            <li>Marca: Hirono</li>
+                                            <li>Tamaño: Altura aprox. 17,5 cm</li>
+                                            <li>Material: PVC/ABS/Hardware</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                  </div>
-            </section> -->
+            </section>
 
         </main>
 
@@ -197,7 +299,9 @@
 
         <!-- <script src="js/scrollreveal.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init();</script>
         <!-- locomotive-scroll -->
         <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->

@@ -318,6 +318,97 @@ header {
     word-wrap: break-word;
 }
 
+/* ---------- ESPECIFICACIONES / INFO -------------- */
+
+#info-specs-bigcontainer {
+    padding: 6rem 12rem;
+    background-color: var(--white);
+}
+
+/* carusel */
+
+.carousel-item > img {
+    border-radius: 10px;
+}
+
+.divs-carousel-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(25%) sepia(7%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(90%);
+}
+
+
+/* acordeón */
+
+.accordion-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    width:100%;
+    margin: 0;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+}
+
+.accordion-item {
+    background-color: var(--white);
+}
+
+.accordion-body {
+    width: 90%;
+    margin-left: 10%;
+}
+
+.accordion-button {
+    background-color: var(--white);
+}
+
+.accordion-button::after {
+    display: none;
+}
+
+.toggle-icon {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: auto;
+}
+
+.toggle-icon::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f067';
+    font-weight: 900;
+}
+
+.toggle-icon:not(.collapsed)::before {
+    content: '\f068';
+}
+
+.accordion-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+.acordion-ul-interior {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
 /* ---------- MEDIA QUERYS -------------- */
 
 @media screen and (max-width: 1200px) {
@@ -417,6 +508,12 @@ header {
     .collections-first-text h4 {
         font-size: 1.4rem;
     }
+
+    /* ---------- ESPECIFICACIONES / INFO -------------- */
+
+    #info-specs-bigcontainer {
+        padding: 3rem 6rem;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -466,6 +563,12 @@ header {
     /* --------COLECCIONES------------- */
 
     #colecciones-bigcontainer {
+        padding: 3rem 5rem;
+    }
+
+    /* ---------- ESPECIFICACIONES / INFO -------------- */
+
+    #info-specs-bigcontainer {
         padding: 3rem 5rem;
     }
 
