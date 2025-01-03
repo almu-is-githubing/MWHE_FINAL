@@ -226,7 +226,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
     .footer_menuBloque {
         display: none;
     }
