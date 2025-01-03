@@ -224,7 +224,7 @@ header {
 }
 
 .header-padding-propio {
-    padding: 0 10%;
+    padding: 3% 10%;
 }
 
 /* --------COLECCIONES------------- */
@@ -582,10 +582,19 @@ header {
         max-height: 40vh; 
     }
 
+    .header-padding-propio {
+        padding: 0 5%;
+    }
+
     /* --------COLECCIONES------------- */
 
     #colecciones-bigcontainer {
         padding: 3rem 0.5rem;
+    }
+
+    /* --------SPECIFICACIONES------------- */
+    #info-specs-bigcontainer {
+        padding: 3rem 1.5rem;
     }
 
 }
