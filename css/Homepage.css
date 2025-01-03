@@ -27,9 +27,9 @@
 /* ---------MENÚ----------- */
 
 #menu {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     width: 100%;
     height: 4rem;
     display: flex;
@@ -126,6 +126,7 @@
 .menu-link {
     color: var(--dark);
     font-size: 1em;
+    transition: 0.5s ease;
 }
 
 .menu-link:hover {
@@ -157,17 +158,17 @@ header {
 #header-content {
     display: flex;
     align-items: center;
-    justify-content: center; /* Alinea el contenido al centro */
-    overflow: hidden; /* Evita el desbordamiento */
+    justify-content: center;
+    overflow: hidden;
     flex-wrap: wrap;
     min-height: 100%;
     padding: 0 2%;
 }
 
 .header__content img {
-    max-width: 100%; /* Las imágenes no deben salirse del contenedor */
+    max-width: 100%;
     height: auto;
-    object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
+    object-fit: contain;
     max-height: 80vh; 
 }
 
@@ -227,39 +228,94 @@ header {
 }
 
 /* --------COLECCIONES------------- */
+#colecciones-bigcontainer {
+    padding: 6rem 12rem;
+    background-color: var(--grey);
+}
+
+.collections-title-text h3 {
+    color: var(--dark);
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    word-wrap: break-word;
+    margin-bottom: 0;
+}
+
+.collections-title-text p {
+    color: var(--dark);
+    font-family: 'Courier Prime', serif;
+    font-size: medium;
+    word-wrap: break-word;
+}
+
 .collections-custom-properties {
-    background-color: var(--dark);
-    color: var(--grey);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.collections-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
+}
+
+.collections-img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.collections-text {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    padding: 10px;
+    z-index: 500;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Geist";
+    color: var(--grey);
 }
 
-.main-hirono-collection1 {
-    background-image: url('/Resources/');
-    background-size: cover; /* Asegura que la imagen cubra todo el área */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    color: white; /* Texto blanco para destacar en el fondo */
-    padding: 20px; /* Espaciado interno */
+.collections-text h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
 }
 
-.main-hirono-collection2 {
-    background-image: url('/Resources/');
-    background-size: cover; /* Asegura que la imagen cubra todo el área */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    color: white; /* Texto blanco para destacar en el fondo */
-    padding: 20px; /* Espaciado interno */
+.collections-text p {
+    font-weight: 400;
+    margin: 0;
 }
 
-.main-hirono-collection3 {
-    background-image: url('/Resources/');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    padding: 20px;
+.collections-first-text {
+    padding: 15% 0;
+    word-wrap: break-word;
+}
+
+.collections-first-text h4 {
+    font-size: 2rem;
+}
+
+.collections-second-text {
+    padding: 7% 0;
+    word-wrap: break-word;
+    justify-content: flex-end;
+}
+
+.collections-third-text {
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 3% 3%;
+    color: var(--dark);
+    word-wrap: break-word;
 }
 
 /* ---------- MEDIA QUERYS -------------- */
@@ -348,6 +404,19 @@ header {
         font-size: 3rem;
     }
 
+    /* --------COLECCIONES------------- */
+
+    #colecciones-bigcontainer {
+    padding: 3rem 6rem;
+    }
+
+    .collections-text h4 {
+        font-size: 1.25rem;
+    }
+
+    .collections-first-text h4 {
+        font-size: 1.4rem;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -394,6 +463,12 @@ header {
         font-size: small;
     }
 
+    /* --------COLECCIONES------------- */
+
+    #colecciones-bigcontainer {
+        padding: 3rem 5rem;
+    }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -402,6 +477,12 @@ header {
     .header__content img {
         max-width: 80%;
         max-height: 40vh; 
+    }
+
+    /* --------COLECCIONES------------- */
+
+    #colecciones-bigcontainer {
+        padding: 3rem 0.5rem;
     }
 
 }
@@ -419,6 +500,15 @@ header {
 
     .menu-link {
         padding-left: 1.75rem;
+    }
+
+    /* ----COLECCIONES----- */
+    .collections-text h4 {
+        font-size: 1rem;
+    }
+
+    .collections-text p {
+        font-size: 0.8rem;
     }
     
 }

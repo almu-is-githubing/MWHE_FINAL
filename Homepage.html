@@ -37,46 +37,45 @@
     </head>
     <body>
 
-        <!-- HEADER------- -->
-        <!-- AQUI VA EL MENU Y EL HEADER -->
+        <!-- MENU -->
+        <nav id="menu">
+            <div>
+                <i class="fa-solid fa-bars" id="menu-hamburguer" onclick="menu()"></i>
+                <ul id="menu-items">
+                    <li>
+                        <a href="#top" class="logo">
+                            <img src="Resources/imgs/Favicon.png" alt="logo_Hirono">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link" onclick="closeMenu()">Qué es</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link" onclick="closeMenu()">Colecciones</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link" onclick="closeMenu()">Información</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link" onclick="closeMenu()">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link" onclick="closeMenu()">Blog</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-xmark" id="close-icon" onclick="closeMenu()"></i>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- HEADER -->
         <header class="header" id="header">
-            <nav id="menu">
-                <div>
-                    <i class="fa-solid fa-bars" id="menu-hamburguer" onclick="menu()"></i>
-                    <ul id="menu-items">
-                        <li>
-                            <a href="#top" class="logo">
-                                <img src="Resources/imgs/Favicon.png" alt="logo_Hirono">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-link" onclick="closeMenu()">Qué es</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-link" onclick="closeMenu()">Colecciones</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-link" onclick="closeMenu()">Información</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-link" onclick="closeMenu()">Contacto</a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-link" onclick="closeMenu()">Blog</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-xmark" id="close-icon" onclick="closeMenu()"></i>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
 
-            
             <div class="header__content" id="header-content">
                 <div class="container-fluid text-center header-padding-propio">
                     <div class="row">
                         <!-- Banner alargado -->
-                      <div class="col-xl-6 col-md-12 mt-xl-3 mb-xl-5 mt-sm-1 mb-md-0 mb-sm-2">
+                      <div class="col-xl-6 col-md-12 mt-xl-5 mb-xl-5 mt-sm-1 mb-md-0 mb-sm-2">
                         <img src="./Resources/imgs/Hirono_Grande_Header.png" class="img-fluid img-border-radius-header" alt="">
                       </div>
                       <div class="col-xl-6 col-md-12 mt-3 mb-5 header-text-properties text-xl-start text-sm-center ps-xl-5">
@@ -121,29 +120,38 @@
 
             <section id="colecciones-bigcontainer">
                 <div class="container-fluid text-center">
-                    <div class="col-12 mb-3 text-xl-start text-sm-center">
+                    <div class="col-12 mb-4 text-md-start text-sm-center collections-title-text ps-3">
                         <h3>Colecciones</h3>
                         <p>Solo por tiempo limitado - Colecciones exclusivas</p>
                     </div>
                     <div class="container-fluid">
                         <div class="row align-items-stretch">
                             <!-- Columna izquierda: 6 columnas -->
-                            <div class="col-md-6 d-flex align-items-center justify-content-flex-end main-hirono-collection1 collections-custom-properties">
-                                <h4>Hirono x Keith Haring</h4>
-                                <p>Div IZQUIERDA</p>
+                            <div class="col-md-6 d-flex align-items-center justify-content-flex-end collections-custom-properties mb-4 mb-md-0">
+                                <img src="./Resources/imgs/Hirono_KeithHaring.JPG" alt="Hirono x Keith Haring" class="img-fluid collections-img">
+                                <div class="collections-text collections-first-text">
+                                    <h4>Hirono x Keith Haring</h4>
+                                    <p>Figuras individuales</p>
+                                </div>
                             </div>
                             
                             <!-- Columna derecha: 2 divs apilados -->
                             <div class="col-md-6">
                                 <!-- Div superior -->
-                                <div class="h-50 d-flex align-items-center justify-content-flex-start main-hirono-collection2 collections-custom-properties ">
-                                    <h4>Hirono x CLOT Series Figures</h4>
-                                    <p>(Edición caja de regalo)</p>
+                                <div class="h-60 d-flex align-items-center justify-content-flex-start collections-custom-properties mb-4">
+                                    <img src="./Resources/imgs/CLOT2.JPG" alt="Hirono x CLOT Series Figures" class="img-fluid collections-img">
+                                    <div class="collections-text collections-second-text">
+                                        <h4>Hirono x CLOT Series Figures</h4>
+                                        <p>Edición caja de regalo</p>
+                                    </div>
                                 </div>
                                 <!-- Div inferior -->
-                                <div class="h-50 d-flex align-items-center justify-content-flex-start main-hirono-collection3 collections-custom-properties">
-                                    <h4>Hirono Listening; Saying; Seeing</h4>
-                                    <p>(Conjunto de figuras)</p>
+                                <div class="h-40 d-flex align-items-center justify-content-flex-start collections-custom-properties">
+                                    <img src="./Resources/imgs/Hirono_listening.jpg" alt="Hirono Listening; Saying; Seeing" class="img-fluid collections-img">
+                                    <div class="collections-text collections-third-text">
+                                        <h4>Hirono Listening; Saying; Seeing</h4>
+                                        <p>Conjunto de figuras</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
