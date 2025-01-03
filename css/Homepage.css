@@ -70,11 +70,11 @@
 }
 
 .footer_socialTitle {
-    margin-top: 1.25vw;
+    margin-top: 1.02rem;
 }
 
 .footer_mediaIcons {
-    padding: 0.4rem 0rem;
+    padding: 0;
     margin: 0;
 }
 
@@ -106,8 +106,8 @@
 .footer_mainInfo {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 3rem 8rem 1.5rem;
+    justify-content: space-around;
+    padding: 3rem 2rem 1.5rem;
 }
 
 .footer_menuBloque {
@@ -146,6 +146,45 @@
     color: var(--mustard);
 }
 
+.footer_acordeon {
+    display: none;
+}
+
+.footer_acordeonDisplay {
+    color: var(--grey);
+    border-bottom: 1px solid var(--grey);
+    cursor: pointer;
+}
+
+.footer_question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    height: 3rem;
+    border-top: 1px solid var(--grey);
+}
+
+#footer_topNo {
+    border-top: none;
+}
+
+.footer_answer {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0 0 0.5rem 0;
+    transition: max-height 1.4s linear;
+}
+
+.footer_acordeonDisplay.active .footer_answer {
+    max-height: 300px;
+}
+
+.footer_acordeonDisplay.active svg {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in;
+}
+
 .footer_footerContainer
 .fotter_bottom {
     display: flex;
@@ -179,16 +218,40 @@
     width: 1.5rem;
 }
 
-@media screen and (max-width: 1024px) {
-    .footer_mainInfo {
-        padding: 3rem 4rem 1.5rem;
-    }
+/* MEDIA QUERIS */
 
+@media screen and (max-width: 1024px) {
     .footer_menuBloque {
         gap: 1.5rem;
     }
 }
 
 @media screen and (max-width: 768px) {
-    
+    .footer_menuBloque {
+        display: none;
+    }
+
+    .footer_acordeon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .footer_mainInfo {
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 2rem 2rem;
+    }
+
+    .footer_socialTitle {
+        margin-top: 1.5rem;
+    }
+
+    .footer_acordeon {
+        margin-top: 2rem;
+    }
+
+    .footer_question {
+        gap: 9.9rem;
+    }
 }
