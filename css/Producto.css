@@ -27,20 +27,20 @@
     
 }
 
-/* Estilos generales para el carrusel */
-.relacionados {
+/* ------ CARRUSEL PRODUCTOS RELACIONADOS */
+.productos__relacionados {
     width: 100%;
-    padding: 3em 0;  /* Da espacio extra arriba y abajo para que el contenido no quede pegado a los bordes */
+    padding: 3em 0;
     background-color: var(--white);
     overflow: hidden;
-    height: 100vh; /* Cambiado a auto para que se ajuste al contenido */
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra los elementos dentro del section */
+    justify-content: center;
     align-items: center;
 }
 
-.relacionados-titulo {
+.prod__rel__titulo {
     font-size: 2.5em;  
     font-family: 'Courier Prime';
     color: var(--black); 
@@ -49,168 +49,161 @@
     /* margin-bottom: 1.5em; */
 }
 
-.relacionados-subtitulo {
-    font-size: 1.2em;  /* Ajusta el tamaño del texto */
-    font-family: 'geist';  /* Fuente utilizada */
-    color: var(--orange);  /* Color del texto */
-    text-align: center;  /* Centrado */
-    margin-bottom: 2em;  /* Espacio debajo del subtítulo */
+.prod__rel__subtitulo{
+    font-size: 1.2em;
+    font-family: 'geist';
+    color: var(--orange);
+    text-align: center;
+    margin-bottom: 2em;
     background-color: var(--white);
 }
 
-.relacionados-carrusel {
-    width: 80%;  /* Reducir el tamaño del carrusel */
+.prod__rel__carrusel {
+    width: 80%;
     /* margin: auto; */
     position: relative;
     background-color: var(--white);
     /* height: 100%; */
 }
 
-.swiper-wrapper {
+.prod__rel__carrusel .swiper-wrapper {
     background-color: var(--white);
 }
 
-.swiper-slide {
+.prod__rel__carrusel .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(0.7);  /* Ajustamos la escala para que las imágenes sean más pequeñas */
+    transform: scale(0.7);
     opacity: 0.7;
     transition: transform 0.5s ease, opacity 0.5s ease;
     background-color: var(--white);
     filter: grayscale(100%);
 }
 
-.swiper-slide img {
+.prod__rel__carrusel .swiper-slide img {
     background-color: var(--white);
 }
 
-.swiper-slide-active {
+.prod__rel__carrusel .swiper-slide-active {
     transform: scale(1);
     opacity: 1;
     filter: grayscale(0%);
 }
 
-.swiper-slide-prev,
-.swiper-slide-next {
-    transform: scale(0.8) !important; /* Hacer las imágenes anteriores y posteriores más pequeñas */
-    opacity: 0.5; /* Reducir la opacidad de las imágenes fuera de foco */
-    z-index: 0; /* Mover las imágenes a un nivel inferior */
+.prod__rel__carrusel .swiper-slide-prev,
+.prod__rel__carrusel .swiper-slide-next {
+    /* transform: scale(0.8) !important; */
+    opacity: 0.5;
+    z-index: 0;
 }
 
-.swiper-slide img {
+.prod__rel__carrusel .swiper-slide img {
     width: 80%;  
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.swiper-slide-active img {
+.prod__rel__carrusel .swiper-slide-active img {
     transform: scale(1.05);
 }
 
-/* Botones de navegación */
-.swiper-button-prev,
-.swiper-button-next {
+/* .prod__rel__carrusel .swiper-button-prev,
+.prod__rel__carrusel .swiper-button-next {
     color: var(--black);
-    background-color: transparent; /* Elimina el fondo */
-    border-radius: 0;  /* Elimina el círculo */
-    padding: 0.5em; /* Ajusta el tamaño del botón */
-    font-size: 1.2em; /* Reduce el tamaño de la fuente */
-    margin: 0 1em; /* Añade separación entre los botones */
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0.5em;
+    font-size: 1.2em;
+    margin: 0 1em;
 }
 
-/* Puedes ajustar el tamaño de los botones más si es necesario */
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-    background-color: transparent; /* Elimina el fondo en el hover */
-    color: var(--orange); /* Cambia el color en hover, si deseas */
+.prod__rel__carrusel .swiper-button-prev:hover,
+.prod__rel__carrusel .swiper-button-next:hover {
+    background-color: transparent;
+    color: var(--orange);
 }
 
-/* Paginación */
-
-.swiper-pagination {
+.prod__rel__carrusel .swiper-pagination {
     display: none;
-}
+} */
 
-/* .swiper-pagination {
+/* .prod__rel__carrusel .swiper-pagination {
     background-color: var(--white);
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     text-align: center; 
 }
 
-.swiper-pagination-bullet {
+.prod__rel__carrusel .swiper-pagination-bullet {
     background-color: var(--black);
     opacity: 0.5;
 }
 
-.swiper-pagination-bullet-active {
+.prod__rel__carrusel .swiper-pagination-bullet-active {
     opacity: 1;
 } */
 
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .relacionados-titulo {
-        font-size: 2.5em; /* Ajusta el tamaño del título en pantallas más pequeñas */
+@media (max-width: 770px) {
+    .prod__rel__titulo {
+        font-size: 2.5em;
+    }
+    .prod__rel__carrusel .swiper-slide {
+        transform: scale(0.9); 
     }
 
-    .swiper-slide {
-        transform: scale(0.7); 
-    }
-
-    .swiper-slide img {
+    .prod__rel__carrusel .swiper-slide img {
         width: 70%;  
         border-radius: 5px;
     }
 
-    .relacionados-carrusel {
-        width: 70%; /* Ajusta el tamaño del carrusel en pantallas más pequeñas */
+    .prod__rel__carrusel {
+        width: 70%;
     }
 
-    .swiper-pagination {
+    .prod__rel__carrusel .swiper-pagination {
         display: block;
-        margin-top: 10px; /* Ajusta el margen si es necesario */
+        margin-top: 10px;
         text-align: center;
         background-color: transparent;
     }
 
-    .swiper-pagination-bullet {
+    .prod__rel__carrusel .swiper-pagination-bullet {
         background-color: var(--black);
         opacity: 0.5;
     }
     
-    .swiper-pagination-bullet-active {
+    .prod__rel__carrusel .swiper-pagination-bullet-active {
         opacity: 1;
     }
 }
 
 @media (max-width: 480px) {
 
-    .relacionados {
-        height: 65vh;
+    .productos__relacionados {
+        height: 80vh;
     }
 
-    .relacionados-titulo {
+    .prod__rel__titulo {
         font-size: 1.9em;
         /* margin-bottom: 0.8em; */
         padding: 0em 1em 0em 1em;
     }
 
-    .relacionados-subtitulo {
-        font-size: 1em;  /* Ajusta el tamaño del texto */
+    .prod__rel__subtitulo {
+        font-size: 1em;
     }
 
-    .swiper-slide {
-        transform: scale(0.65); /* Aún más pequeño en pantallas muy pequeñas */
+    .prod__rel__carrusel .swiper-slide {
+        transform: scale(0.95);
     }
 
-    .swiper-slide img {
+    .prod__rel__carrusel .swiper-slide img {
         width: 60%;
     }
 
-    .relacionados-carrusel {
-        width: 95%; /* Ajusta el carrusel en pantallas extremadamente pequeñas */
+    .prod__rel__carrusel {
+        width: 95%;
     }
 }

@@ -28,7 +28,7 @@
 }
 
 /* ---DESCRIPCIÓN HIRONOS--- */
-.descripcion {
+.info__descripcion {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,7 @@
     color: var(--black);
 }
 
-.descripcion-contenido {
+.info__descripcion__contenido {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 90%;
@@ -46,7 +46,7 @@
     gap: 0;
 }
 
-.descripcion-texto {
+.info__descripcion__texto {
     padding: 1em 5em 1em 1em;
     background-color: var(--white);
     display: flex;
@@ -55,16 +55,16 @@
     align-items: flex-start;
 }
 
-.descripcion-texto b {
+.info__descripcion__texto b {
     background-color: var(--white);
     font-weight: 600;
 }
 
-.descripcion-texto i {
+.info__descripcion__texto i {
     background-color: var(--white);
 } 
 
-.descripcion-titulo {
+.info__descripcion__titulo {
     font-size: 3.5em;
     margin-bottom: 10px;
     background-color: var(--white);
@@ -73,16 +73,16 @@
     line-height: 1em;
 }
 
-.descripcion-titulo:hover {
+.info__descripcion__titulo:hover {
     color: var(--orange);
 }
 
-.descripcion-titulo b {
+.info__descripcion__titulo b {
     font-weight: bold;
     background-color: var(--white);
 }
 
-.descripcion-parrafo {
+.info__descripcion__parrafo {
     font-size: 1rem;
     line-height: 1.5;
     margin-top: 0;
@@ -90,7 +90,7 @@
     font-family: 'Geist';
 }
 
-.descripcion-imagen {
+.info__descripcion__imagen {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +98,7 @@
     background-color: var(--white);
 }
 
-.descripcion-imagen img {
+.info__descripcion__imagen img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -106,36 +106,36 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.descripcion-imagen img:hover {
+.info__descripcion__imagen img:hover {
     transform: scale(1.05);
     opacity: 0.9;
 }
 
 @media (max-width: 800px) {
-    .descripcion-contenido {
+    .info__descripcion__contenido {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         width: 90%;
         height: 75%;    
     }
 
-    .descripcion-texto {
+    .info__descripcion__texto {
         text-align: center;
         padding: 1em;
         align-items: center;
         margin-bottom: 0;
     }
 
-    .descripcion-titulo {
+    .info__descripcion__titulo {
         text-align: center;
         color: var(--orange);
     }
 
-    .descripcion-imagen {
+    .info__descripcion__imagen {
         padding: 2em;
     }
 
-    .descripcion-imagen img {
+    .info__descripcion__imagen img {
         width: 100%;
         height: auto;
         background-color: var(--white);

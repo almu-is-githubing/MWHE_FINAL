@@ -1,19 +1,19 @@
 // Inicializar Swiper
-const swiper = new Swiper('.relacionados-carrusel', {
+const swiper = new Swiper('.prod__rel__carrusel', {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     grabCursor: true,
     centeredSlides: true,
     effect: 'slide', // Cambiar a 'coverflow' si quieres un efecto 3D más pronunciado
-    pagination: {
-      el: '.relacionados-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.relacionados-next',
-      prevEl: '.relacionados-prev',
-    },
+    // pagination: {
+    //   el: '.relacionados-pagination',
+    //   clickable: true,
+    // },
+    // navigation: {
+    //   nextEl: '.relacionados-next',
+    //   prevEl: '.relacionados-prev',
+    // },
     breakpoints: {
       768: {
         slidesPerView: 2,
