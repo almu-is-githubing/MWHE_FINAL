@@ -22,16 +22,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    background-color: #ffefef;
-    
+    scroll-behavior: smooth;    
 }
 
 /* ------ CARRUSEL PRODUCTOS RELACIONADOS */
 .productos__relacionados {
     width: 100%;
     padding: 3em 0;
-    background-color: var(--white);
+    background-color: var(--mustard);
     overflow: hidden;
     height: 100vh;
     display: flex;
@@ -43,31 +41,24 @@
 .prod__rel__titulo {
     font-size: 2.5em;  
     font-family: 'Courier Prime';
-    color: var(--black); 
+    color: var(--white); 
     text-align: center; 
-    background-color: var(--white);
     /* margin-bottom: 1.5em; */
 }
 
 .prod__rel__subtitulo{
     font-size: 1.2em;
     font-family: 'geist';
-    color: var(--orange);
+    color: var(--white);
     text-align: center;
     margin-bottom: 2em;
-    background-color: var(--white);
 }
 
 .prod__rel__carrusel {
     width: 80%;
     /* margin: auto; */
     position: relative;
-    background-color: var(--white);
     /* height: 100%; */
-}
-
-.prod__rel__carrusel .swiper-wrapper {
-    background-color: var(--white);
 }
 
 .prod__rel__carrusel .swiper-slide {
@@ -77,12 +68,7 @@
     transform: scale(0.7);
     opacity: 0.7;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    background-color: var(--white);
     filter: grayscale(100%);
-}
-
-.prod__rel__carrusel .swiper-slide img {
-    background-color: var(--white);
 }
 
 .prod__rel__carrusel .swiper-slide-active {
@@ -162,7 +148,7 @@
         width: 70%;
     }
 
-    .prod__rel__carrusel .swiper-pagination {
+    /* .prod__rel__carrusel .swiper-pagination {
         display: block;
         margin-top: 10px;
         text-align: center;
@@ -176,7 +162,7 @@
     
     .prod__rel__carrusel .swiper-pagination-bullet-active {
         opacity: 1;
-    }
+    } */
 }
 
 @media (max-width: 480px) {

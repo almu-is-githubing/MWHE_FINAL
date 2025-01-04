@@ -25,4 +25,3 @@ const swiper = new Swiper('.prod__rel__carrusel', {
       },
     },
   });
-  
