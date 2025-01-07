@@ -45,9 +45,9 @@ $(document).ready(function () {
       const $image = $(".contact__form__img"); 
   
       if ($(window).width() < 985) {
-        $image.attr("src", "Resources/Homepage/hirono_prince_contacto_responsive.webp"); 
+        $image.attr("src", "Resources/Homepage/Homepage_Contacto/hirono_prince_contacto_responsive.webp"); 
       } else {
-        $image.attr("src", "Resources/Homepage/hirono_prince_contacto.webp");
+        $image.attr("src", "Resources/Homepage/Homepage_Contacto/hirono_prince_contacto.webp");
       }
     }
     

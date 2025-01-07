@@ -628,7 +628,7 @@ header {
     
 }
 
-/* ---DESCRIPCIÓN HIRONOS--- */
+/* ---- INTRO INFO---- */
 .info__descripcion {
     display: flex;
     justify-content: center;
@@ -719,23 +719,19 @@ header {
         width: 90%;
         height: 75%;    
     }
-
     .info__descripcion__texto {
         text-align: center;
         padding: 1em;
         align-items: center;
         margin-bottom: 0;
     }
-
     .info__descripcion__titulo {
         text-align: center;
         color: var(--orange);
     }
-
     .info__descripcion__imagen {
         padding: 2em;
     }
-
     .info__descripcion__imagen img {
         width: 100%;
         height: auto;

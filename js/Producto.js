@@ -1,19 +1,11 @@
-// Inicializar Swiper
+// Swiper
 const swiper = new Swiper('.prod__rel__carrusel', {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     grabCursor: true,
     centeredSlides: true,
-    effect: 'slide', // Cambiar a 'coverflow' si quieres un efecto 3D más pronunciado
-    // pagination: {
-    //   el: '.relacionados-pagination',
-    //   clickable: true,
-    // },
-    // navigation: {
-    //   nextEl: '.relacionados-next',
-    //   prevEl: '.relacionados-prev',
-    // },
+    effect: 'slide',
     breakpoints: {
       768: {
         slidesPerView: 2,
@@ -42,27 +34,27 @@ $(document).ready(function () {
   // SELECCIÓN DE FOTOS 
 
   $('#product-1').click(function(){
-      $('#main-picture').attr('src', 'Resources/Producto/hirono_product_1.webp');
+      $('#main-picture').attr('src', 'Resources/Producto/Producto_Fotos/hirono_product_1.webp');
   });
 
 
   $('#product-2').click(function(){
-    $('#main-picture').attr('src', 'Resources/Producto/hirono_product_2.webp');
+    $('#main-picture').attr('src', 'Resources/Producto/Producto_Fotos/hirono_product_2.webp');
   });
 
 
   $('#product-3').click(function(){
-    $('#main-picture').attr('src', 'Resources/Producto/hirono_product_3.webp');
+    $('#main-picture').attr('src', 'Resources/Producto/Producto_Fotos/hirono_product_3.webp');
   });
 
 
   $('#product-4').click(function(){
-    $('#main-picture').attr('src', 'Resources/Producto/hirono_box_1.webp');
+    $('#main-picture').attr('src', 'Resources/Producto/Producto_Fotos/hirono_box_1.webp');
   });
 
 
   $('#product-5').click(function(){
-    $('#main-picture').attr('src', 'Resources/Producto/hirono_box_2.webp');
+    $('#main-picture').attr('src', 'Resources/Producto/Producto_Fotos/hirono_box_2.webp');
   });
 
 
