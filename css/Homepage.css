@@ -1003,3 +1003,328 @@ header {
     line-height: 1.6;  /* Mayor espacio entre líneas para mejor lectura */
     padding: 0 15px;  /* Añadir un poco de espacio a los lados */
 }
+
+/* FORMULARIO CONTACTO INCIDENCIAS*/
+
+#form-contacto {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mustard);
+}
+
+#form-contacto > div {
+    height: 85%;
+    width: 80%;
+    max-width: 900px;
+    margin: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--black);
+    border-radius: 15px;
+}
+
+#form-contacto > div > figure {
+    height: 100%;
+    width: auto;
+    margin-bottom: 0;
+}
+
+#form-contacto > div > figure > img {
+    height: 100%;
+    width: auto;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    object-fit: cover;
+}
+
+#form-contacto > div > div {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-contacto > div > div > h2 {
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+#form-contacto .texto__contacto p {
+    color: var(--white);
+    font-family: "Geist", serif;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* FORMULARIO */
+
+#form-contacto form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+#form-contacto form > input {
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    border-bottom: 1px solid var(--white);
+    letter-spacing: 0.15rem;
+}
+
+#form-contacto form > input::placeholder {
+    color: var(--white);
+    transition: 0.2s ease-in-out;
+    outline: none;
+}
+
+#form-contacto form > input:focus {
+    color: var(--mustard);
+    outline: none;
+}
+
+#form-contacto form > input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+}
+
+#submit {
+    border-radius: 5px;
+    border: none;
+    height: 2.7rem;
+    width: 16rem;
+    background-color: var(--mustard);
+    color: var(--black);
+    font-family: "Geist", serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+#submit:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.formulario__incidencias > input:not(:first-child){
+    margin-top: 1.15rem;
+}
+
+.modal__contacto:not(.modal-content) {
+    cursor: pointer;
+}
+
+.modal__contacto > .modal-dialog > .modal-content{
+    background: none;
+    border: none;
+    cursor: default;
+}
+
+/* REDIRECCIÓN AL BLOG DE CARGO */
+
+.redirection__blog {
+    background-color: var(--black);
+    padding: 2rem 0;
+}
+
+.redirection__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redirection__intro {
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    width: 60%;
+}
+
+.redirection__title {
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: 700;
+}
+
+.redirection__intro__text {
+    font-family: "Geist", serif;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.card__redirection__container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card__redirection {
+    max-width: 300px;
+    background-color: var(--mustard);
+    color: var(--black);
+    border-radius: 10px;
+    margin: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.card__redirection:hover {
+    transform: translate(0, -10px);
+    box-shadow: 0 2px 5px #000000;
+    background-color: var(--orange);
+}
+
+.card__redirection > img {
+    border-radius: 10px;
+}
+
+.card__redirection > .card-body > .card-title {
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.redirection__btn {
+    padding: 0.5rem;
+    margin: 1rem 1rem 3rem 1rem;
+    text-decoration: none;
+    background-color: var(--mustard);
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    width: 300px;
+}
+
+.redirection__btn > a{
+    color: var(--black);
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+.redirection__btn:hover {
+    background-color: var(--orange);
+}
+
+.redirection__btn:hover > a {
+    color: var(--white);
+}
+
+@media only screen and (max-width: 1000px) {
+
+    /* FORMULARIO */
+
+    .formulario__incidencias {
+        margin-top: 0.7rem;
+    }
+
+    input::placeholder {
+        font-size: 1rem;
+    }
+
+    #form-contacto {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--mustard);
+        padding: 0;
+        margin: 0;
+    }
+
+    #form-contacto > div {
+        height: 85%;
+        width: 80%;
+        max-width: 900px;
+        margin: 3rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        background-color: var(--black);
+        border-radius: 15px;
+    }
+
+    #form-contacto > div > figure > img {
+        height: auto;
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+    }
+
+    .redirection__intro {
+        color: var(--white);
+        text-align: center;
+        padding: 2rem;
+        width: auto;
+    }
+
+    .card__redirection {
+        width: 175px;
+        height: auto;
+        margin: 0.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    
+    #form-contacto > div {
+        margin: 1rem;
+        width: 100%;
+    }
+
+    #form-contacto > div > div > h2 {
+        font-size: 1.3rem;
+    }
+
+    input::placeholder {
+        font-size: 0.8rem;
+    }
+    
+    #submit {
+        width: 150px;
+    }
+
+    .redirection__btn {
+        width: 250px;
+    }
+
+    .card__redirection__container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .card__redirection {
+        width: auto;
+        height: auto;
+        margin: 1rem;
+    }
+}
