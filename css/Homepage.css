@@ -1200,6 +1200,7 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color: var(--mustard);
     color: var(--black);
     border-radius: 10px;
+    height: auto;
     margin: 1rem;
     transition: 0.3s ease-in-out;
 }
@@ -1219,6 +1220,10 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 700;
     font-size: 1.2rem;
     margin-bottom: 0;
+}
+
+.card__redirection > .card-body {
+    background-color: var(--mustard);
 }
 
 .redirection__btn {
