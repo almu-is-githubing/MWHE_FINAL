@@ -17,7 +17,7 @@ $(document).ready(function() {
     });
 });
 
-// ALMU
+// MAS INFOR SOBRE EL CREADOR
 
 function learnMore() {
     alert("Más información sobre el creador próximamente!");
