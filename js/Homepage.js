@@ -16,3 +16,9 @@ $(document).ready(function() {
         $('#menu-items').removeClass('show');
     });
 });
+
+// ALMU
+
+function learnMore() {
+    alert("Más información sobre el creador próximamente!");
+}
