@@ -84,12 +84,12 @@
 #menu > div > i,
 #menu > div > ul > li > a,
 #menu > div > i {
-    color: var(--dark);
+    color: var(--black);
 }
 
 #menu > div > ul > li > a {
     font-size: 1em;
-    color: var(--dark);
+    color: var(--black);
     text-decoration: none;
     font-family: 'Geist';
     font-weight: 600;
@@ -103,7 +103,7 @@
 }
 
 #menu-hamburguer {
-    color: var(--dark);
+    color: var(--black);
     cursor: pointer;
     font-size: 1.5em;
 }
@@ -126,7 +126,7 @@
 }
 
 .menu-link {
-    color: var(--dark);
+    color: var(--black);
     font-size: 1em;
     transition: 0.5s ease;
 }
@@ -146,11 +146,10 @@
 /* ---------HEADER----------- */
 
 header {
-    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    background-color: var(--dark);
+    background-color: var(--black);
     background-attachment: fixed;
     flex-direction: column;
     z-index: 1;
@@ -203,7 +202,7 @@ header {
 .btn-header-propiedades-nuestras {
     transition: 0.5s ease;
     font-family: "Geist", serif;
-    background-color: var(--light__orange);
+    background-color: var(--mustard);
     border-radius: 5px;
     border-style: none;
     color: var(--dark);
@@ -316,7 +315,7 @@ header {
     justify-content: flex-end;
     align-items: flex-end;
     padding: 3% 3%;
-    color: var(--dark);
+    color: var(--black);
     word-wrap: break-word;
 }
 
@@ -444,7 +443,7 @@ header {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--dark);
+        background-color: var(--black);
         transition-duration: 1s;
     }
 
