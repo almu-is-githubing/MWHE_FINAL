@@ -16,3 +16,6 @@ $(document).ready(function() {
         $('#menu-items').removeClass('show');
     });
 });
+function learnMore() {
+    alert("Más información sobre el creador próximamente!");
+}
