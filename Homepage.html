@@ -48,7 +48,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="menu-link" onclick="closeMenu()">Qué es</a>
+                        <a href="#info__descripcion" class="menu-link" onclick="closeMenu()">Qué es</a>
                     </li>
                     <li>
                         <a href="#colecciones-bigcontainer" class="menu-link" onclick="closeMenu()">Colecciones</a>
@@ -57,10 +57,10 @@
                         <a href="#info-specs-bigcontainer" class="menu-link" onclick="closeMenu()">Información</a>
                     </li>
                     <li>
-                        <a href="#" class="menu-link" onclick="closeMenu()">Contacto</a>
+                        <a href="#form-contacto" class="menu-link" onclick="closeMenu()">Contacto</a>
                     </li>
                     <li>
-                        <a href="#" class="menu-link" onclick="closeMenu()">Blog</a>
+                        <a href="https://hirono-blog.cargo.site/" class="menu-link" onclick="closeMenu()">Blog</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-xmark" id="close-icon" onclick="closeMenu()"></i>
@@ -74,7 +74,7 @@
             <div class="header__content" id="header-content">
                 <div class="container-fluid text-center header-padding-propio">
                     <div class="row">
-                        <!-- Banner alargado -->
+                        <!-- Row -->
                       <div class="col-xl-6 col-md-12 mt-xl-5 mb-xl-5 mt-sm-1 mb-md-0 mb-sm-2">
                         <img src="./Resources/Homepage/Homepage_Header/Hirono_Grande_Header.png" class="img-fluid img-border-radius-header" alt="">
                       </div>
@@ -82,8 +82,10 @@
                         <h1>Compra tu Hirono</h1>
                         <p>¡Colaboración exclusiva con Keith Haring ya disponible! - Edición limitada</p>
                         <p>En venta únicamente hasta el 28 de Febrero</p>
-                        <button type="button" class="btn btn-lg btn-primary btn-header-propiedades-nuestras">Comprar ahora</button>
-                      </div>
+                        <a class="etiqueta_link_propiedades" href="Producto.html" target="_blank">
+                            <button type="button" class="btn btn-lg btn-primary btn-header-propiedades-nuestras">Comprar ahora</button>
+                        </a>
+                    </div>
                       <!-- Fila de Hironos -->
                         <div class="container-fluid text-center pb-3">
                             <div class="row justify-content-center">
@@ -119,7 +121,7 @@
         <main class="main">
 
             <!---- INTRO ---->
-            <section class="info__descripcion">
+            <section id="info__descripcion" class="info__descripcion">
                 <div class="info__descripcion__contenido">
                     <div class="info__descripcion__texto">
                         <h2 class="info__descripcion__titulo">¿Qué son los <b>Hironos?</b></h2>
@@ -141,7 +143,7 @@
                     <div class="container-fluid">
                         <div class="row align-items-stretch">
                             <!-- Columna izquierda: 6 columnas -->
-                            <div class="col-md-6 d-flex align-items-center justify-content-flex-end collections-custom-properties mb-4 mb-md-0">
+                            <div class="col-md-6 d-flex align-items-center justify-content-flex-end collections-custom-properties mb-4 mb-md-0" onclick="scrollToSection('colaboraciones')">
                                 <img src="./Resources/Homepage/Homepage_Colecciones/Hirono_KeithHaring.JPG" alt="Hirono x Keith Haring" class="img-fluid collections-img">
                                 <div class="collections-text collections-first-text">
                                     <h4>Hirono x Keith Haring</h4>
@@ -152,7 +154,7 @@
                             <!-- Columna derecha: 2 divs apilados -->
                             <div class="col-md-6">
                                 <!-- Div superior -->
-                                <div class="h-60 d-flex align-items-center justify-content-flex-start collections-custom-properties mb-4">
+                                <div class="h-60 d-flex align-items-center justify-content-flex-start collections-custom-properties mb-4" onclick="scrollToSection('colecciones')">
                                     <img src="./Resources/Homepage/Homepage_Colecciones/CLOT2.JPG" alt="Hirono x CLOT Series Figures" class="img-fluid collections-img">
                                     <div class="collections-text collections-second-text">
                                         <h4>Hirono x CLOT Series Figures</h4>
@@ -160,7 +162,7 @@
                                     </div>
                                 </div>
                                 <!-- Div inferior -->
-                                <div class="h-40 d-flex align-items-center justify-content-flex-start collections-custom-properties">
+                                <div class="h-40 d-flex align-items-center justify-content-flex-start collections-custom-properties" onclick="scrollToSection('colecciones')">
                                     <img src="./Resources/Homepage/Homepage_Colecciones/Hirono_listening.jpg" alt="Hirono Listening; Saying; Seeing" class="img-fluid collections-img">
                                     <div class="collections-text collections-third-text">
                                         <h4>Hirono Listening; Saying; Seeing</h4>

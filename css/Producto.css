@@ -35,6 +35,123 @@ img {
     vertical-align: middle;
 }
 
+/* ---------MENÚ----------- */
+
+#menu {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    background-color: var(--white);
+    border-radius: 0 0 15px 15px;
+}
+
+#menu > div {
+    width: 100%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+}
+
+#menu > div > i,
+#menu > div > ul > li:last-child {
+    display: none;
+}
+
+#menu > div > ul {
+    width: 100%;
+    height: 3em;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu > div > ul > li {
+    list-style: none;
+    width: 5%;
+    margin-left: 1.5%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#menu > div > ul > li:first-child > a {
+    display: flex;
+    justify-content: center;
+}
+
+#menu > div > ul > li:first-child > a > img {
+    height: 2em;
+    width: auto;
+}
+
+#menu > div > i,
+#menu > div > ul > li > a,
+#menu > div > i {
+    color: var(--black);
+}
+
+#menu > div > ul > li > a {
+    font-size: 1em;
+    color: var(--black);
+    text-decoration: none;
+    font-family: 'Geist';
+    font-weight: 600;
+}
+
+#close-icon {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.5em;
+    display: none;
+}
+
+#menu-hamburguer {
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+#menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+#menu-items {
+    left: -100%;
+}
+
+#menu-items.show {
+    left: 0;
+    transition: left 0.5s ease-in-out;
+}
+
+.menu-link {
+    color: var(--black);
+    font-size: 1em;
+    transition: 0.5s ease;
+}
+
+.menu-link:hover {
+    color: var(--grey) !important;
+    transition: 0.5s ease;
+}
+
+.logo img {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /* MUESTRA DEL PRODUCTO */
 
 .product {
@@ -358,6 +475,141 @@ input[type="number"]::-webkit-outer-spin-button {
 .flickity-button:hover .flickity-button-icon {
     fill: var(--mustard);
     background: transparent;
+}
+
+/* ---------- MEDIA QUERYS -------------- */
+
+@media screen and (max-width: 1200px) {
+
+    /* --------------------- MENÚ -------------------- */
+
+    #menu {
+        width: 8%;
+        margin: 0 1%;
+    }
+
+    #menu > div {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #menu > div > i {
+        display: block;
+        cursor: pointer;
+    }
+
+    #menu > div > ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        padding: 15% 0;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--black);
+        transition-duration: 1s;
+    }
+
+    #menu > div > ul > li {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    #menu > div > ul > li > a {
+        text-decoration: none;
+        font-size: 4rem;
+    }
+
+    #menu > div > ul > li:last-child {
+        display: block;
+        position: absolute;
+        top: 2em;
+    }
+
+    #menu > div > ul > li:last-child > i {
+        color: var(--grey);
+    }
+
+    #menu > div > ul > li > a {
+        color: var(--white);
+    }
+
+    #menu-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 0 auto;
+    }
+    
+    #close-icon {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    /* ---MENU --- */
+    
+    #menu {
+        width: 14%;
+        margin: 0 2%;
+    }
+
+    #menu > div > ul {
+        padding: 25% 0;
+    }
+
+    #menu > div > ul > li:last-child {
+        right: 1rem;
+    }
+
+    #menu > div > ul > li > a {
+        text-decoration: none;
+        font-size: 2.5rem;
+    }
+
+    .menu-link {
+        font-size: 3.5rem;
+        color: white;
+        padding-left: 2.5rem;
+    }
+
+    #menu-items {
+        padding-top: 0;
+    }
+
+    #close-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    /* ---------MENU----------- */
+    #menu > div > ul > li > a {
+        font-size: 2rem;
+    }
+
+    #menu > div > ul {
+        padding: 40% 0;
+    }
+
+    .menu-link {
+        padding-left: 1.75rem;
+    }
+    
 }
 
 @media (max-width: 1000px) {

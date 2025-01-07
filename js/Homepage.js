@@ -17,6 +17,14 @@ $(document).ready(function() {
     });
 });
 
+// Link imágenes de colecciones a colecciones con más info
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 // ALMU
 
 function learnMore() {

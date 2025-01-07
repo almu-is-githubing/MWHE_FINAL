@@ -201,6 +201,10 @@ header {
     border-radius: 10px;
 }
 
+.etiqueta_link_propiedades {
+    color: var(--white);
+}
+
 .btn-header-propiedades-nuestras {
     transition: 0.5s ease;
     font-family: "Geist", serif;
@@ -208,7 +212,7 @@ header {
     border-radius: 5px;
     border-style: none;
     color: var(--dark);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .btn-header-propiedades-nuestras:hover {
@@ -258,6 +262,12 @@ header {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.collections-custom-properties:hover {
+    transform: scale(1.015);
+    cursor: pointer;
 }
 
 .collections-img {
@@ -355,6 +365,12 @@ header {
     font-weight: 600;
     width:100%;
     margin: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.accordion-title:hover {
+    color: var(--mustard);
+    transition: 0.2s ease-in-out;
 }
 
 .accordion-header {
