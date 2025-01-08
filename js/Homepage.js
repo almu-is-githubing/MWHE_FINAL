@@ -74,3 +74,57 @@ acordeons.forEach((footer_acordeonDisplay) => {
         footer_acordeonDisplay.classList.toggle("active")
     });
 });
+
+// GSAP
+
+gsap.from(".hirono-profile h2, .hirono-profile p", {
+  opacity: 0,
+  y: 30,
+  duration: 1,
+  stagger: 0.2
+});
+
+
+gsap.from(".creator-image", {
+  opacity: 0,
+  scale: 0.8,
+  duration: 1.2,
+  delay: 0.5
+});
+
+
+gsap.from(".gallery-image", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  stagger: 0.3,
+  delay: 1
+});
+
+gsap.from(".instagram-link a", {
+  opacity: 0,
+  y: 20,
+  duration: 1,
+  delay: 1.5
+});
+
+
+ gsap.from(".info__descripcion__texto h2", {
+  x: -50,
+  duration: 1,
+  delay: 0.3,
+  ease: "power2.out"
+});
+
+gsap.from(".info__descripcion__texto p", {
+  x: -50,
+  duration: 1,
+  delay: 0.5,
+  ease: "power2.out"
+});
+
+
+gsap.fromTo(".info__descripcion__imagen img", 
+  { scale: 0.9 }, 
+  { scale: 1, duration: 1, delay: 0.7, ease: "power2.out" } 
+);
