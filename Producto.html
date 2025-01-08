@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.css">
  
         <!-- CSS------- -->
         <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
@@ -28,622 +30,623 @@
     </head>
     <body>
 
-        <!-- MENU -->
-        <nav id="menu">
-            <div>
-                <i class="fa-solid fa-bars" id="menu-hamburguer" onclick="menu()"></i>
-                <ul id="menu-items">
-                    <li>
-                        <a href="Homepage.html" class="logo">
-                            <img src="Resources/Homepage/Favicon.png" alt="logo_Hirono">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="Homepage.html#info__descripcion" class="menu-link" onclick="closeMenu()">Qué es</a>
-                    </li>
-                    <li>
-                        <a href="Homepage.html#colecciones-bigcontainer" class="menu-link" onclick="closeMenu()">Colecciones</a>
-                    </li>
-                    <li>
-                        <a href="Homepage.html#info-specs-bigcontainer" class="menu-link" onclick="closeMenu()">Información</a>
-                    </li>
-                    <li>
-                        <a href="Homepage.html#form-contacto" class="menu-link" onclick="closeMenu()">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="https://hirono-blog.cargo.site/" class="menu-link" onclick="closeMenu()">Blog</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-xmark" id="close-icon" onclick="closeMenu()"></i>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- MAIN------- -->
-        <main class="main">
-
-            <section id="product-detail" class="product__detail">
-
-                <div class="product" id="product">
-                    <div class="product__pictures col" id="product-pictures">
-                        <figure class="row">
-                            <img src="Resources/Producto/Producto_Fotos/hirono_product_1.webp" alt="" class="main__picture col" id="main-picture">
-                        </figure>
-                        
-                        <div class="miniature__guide row">
-                            <figure class="mini__img__container col" id="product-1">
-
-                                <img src="Resources/Producto/Producto_Fotos/hirono_product_1.webp" alt="" class="pictures__miniature" id="hirono-product-1">
-                                
-                                <figcaption>
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </figcaption>
-                            
+            <!-- MENU -->
+            <nav id="menu">
+                <div>
+                    <i class="fa-solid fa-bars" id="menu-hamburguer" onclick="menu()"></i>
+                    <ul id="menu-items">
+                        <li>
+                            <a href="Homepage.html" class="logo">
+                                <img src="Resources/Homepage/Favicon.png" alt="logo_Hirono">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Homepage.html#info__descripcion" class="menu-link" onclick="closeMenu()">Qué es</a>
+                        </li>
+                        <li>
+                            <a href="Homepage.html#colecciones-bigcontainer" class="menu-link" onclick="closeMenu()">Colecciones</a>
+                        </li>
+                        <li>
+                            <a href="Homepage.html#info-specs-bigcontainer" class="menu-link" onclick="closeMenu()">Información</a>
+                        </li>
+                        <li>
+                            <a href="Homepage.html#form-contacto" class="menu-link" onclick="closeMenu()">Contacto</a>
+                        </li>
+                        <li>
+                            <a href="https://hirono-blog.cargo.site/" class="menu-link" onclick="closeMenu()">Blog</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark" id="close-icon" onclick="closeMenu()"></i>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    
+            <!-- MAIN------- -->
+            <main class="main" data-scroll-container>
+    
+                <section id="product-detail" class="product__detail">
+    
+                    <div class="product" id="product">
+                        <div class="product__pictures col" id="product-pictures">
+                            <figure class="row">
+                                <img src="Resources/Producto/Producto_Fotos/hirono_product_1.webp" alt="" class="main__picture col" id="main-picture">
                             </figure>
-
-                            <figure class="mini__img__container col" id="product-2">
-
-                                <img src="Resources/Producto/Producto_Fotos/hirono_product_2.webp" alt="" class="pictures__miniature" id="hirono-product-2">
-                                
-                                <figcaption>
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </figcaption>
                             
-                            </figure>
-
-                            <figure class="mini__img__container col" id="product-3">
-
-                                <img src="Resources/Producto/Producto_Fotos/hirono_product_3.webp" alt="" class="pictures__miniature" id="hirono-product-3">
+                            <div class="miniature__guide row">
+                                <figure class="mini__img__container col" id="product-1">
+    
+                                    <img src="Resources/Producto/Producto_Fotos/hirono_product_1.webp" alt="" class="pictures__miniature" id="hirono-product-1">
+                                    
+                                    <figcaption>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </figcaption>
                                 
-                                <figcaption>
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </figcaption>
-                            
-                            </figure>
-
-                            <figure class="mini__img__container col" id="product-4">
-
-                                <img src="Resources/Producto/Producto_Fotos/hirono_box_1.webp" alt="" class="pictures__miniature" id="hirono-product-4">
+                                </figure>
+    
+                                <figure class="mini__img__container col" id="product-2">
+    
+                                    <img src="Resources/Producto/Producto_Fotos/hirono_product_2.webp" alt="" class="pictures__miniature" id="hirono-product-2">
+                                    
+                                    <figcaption>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </figcaption>
                                 
-                                <figcaption>
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </figcaption>
-                            
-                            </figure>
-
-                            <figure class="mini__img__container col" id="product-5">
-
-                                <img src="Resources/Producto/Producto_Fotos/hirono_box_2.webp" alt="" class="pictures__miniature" id="hirono-product-5">
+                                </figure>
+    
+                                <figure class="mini__img__container col" id="product-3">
+    
+                                    <img src="Resources/Producto/Producto_Fotos/hirono_product_3.webp" alt="" class="pictures__miniature" id="hirono-product-3">
+                                    
+                                    <figcaption>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </figcaption>
                                 
-                                <figcaption>
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </figcaption>
-                            
-                            </figure>
+                                </figure>
+    
+                                <figure class="mini__img__container col" id="product-4">
+    
+                                    <img src="Resources/Producto/Producto_Fotos/hirono_box_1.webp" alt="" class="pictures__miniature" id="hirono-product-4">
+                                    
+                                    <figcaption>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </figcaption>
+                                
+                                </figure>
+    
+                                <figure class="mini__img__container col" id="product-5">
+    
+                                    <img src="Resources/Producto/Producto_Fotos/hirono_box_2.webp" alt="" class="pictures__miniature" id="hirono-product-5">
+                                    
+                                    <figcaption>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </figcaption>
+                                
+                                </figure>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="product__description col">
-                        <div class="product__info">
-                            <div class="product__name">
-                                <h2>HIRONO × CLOT</h2>
-                                <i class="fa-regular fa-heart" id="corazon"></i>
-                            </div>
-
-                            <span id="unit-price" data-price="15">15,00€</span> 
+    
+                        <div class="product__description col">
+                            <div class="product__info">
+                                <div class="product__name">
+                                    <h2>HIRONO × CLOT</h2>
+                                    <i class="fa-regular fa-heart" id="corazon"></i>
+                                </div>
+    
+                                <span id="unit-price" data-price="15">15,00€</span> 
+                                    
+                                <div class="product__option">
+                                    <div class="single">
+                                        <p>Caja Individual</p>
+                                    </div>
+    
+                                    <div class="set">
+                                        <p>Set Completo</p>
+                                    </div>
+                                </div>
+    
+                                <div class="quantity__price">
+                                    <div class="product__quantity">
+                                        <label for="quantity">Cantidad:</label>
+                                        <input type="number" id="quantity" min="1" value="1">
+                                    </div>
                                 
-                            <div class="product__option">
-                                <div class="single">
-                                    <p>Caja Individual</p>
-                                </div>
-
-                                <div class="set">
-                                    <p>Set Completo</p>
-                                </div>
-                            </div>
-
-                            <div class="quantity__price">
-                                <div class="product__quantity">
-                                    <label for="quantity">Cantidad:</label>
-                                    <input type="number" id="quantity" min="1" value="1">
-                                </div>
-                            
-                                <div class="total__price__div">
-                                    <span>Total:</span>
-                                    <span id="total-price">15,00€</span> 
-                                </div>
-                            </div>
-                            
-                            <div class="cart__btn">
-                                <div class="cart" id="cart">
-                                    <p>Add to cart</p>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                        <div class="accordion" id="product-accordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        Detalles
-                                    </button>
-                                </h2>
-
-                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p><strong>Marca:</strong> Hirono</p>
-
-                                        <p><strong>Tamaño:</strong> Aproximadamente 8cm</p>
-
-                                        <p><strong>Material:</strong> PVC/ABS/Polyester</p>
-
-                                        <p>Un set completo contiene 6 blind boxes</p>
-
-                                        <p>(Si se compra un set completo no habrá figuras repetidas)</p>
+                                    <div class="total__price__div">
+                                        <span>Total:</span>
+                                        <span id="total-price">15,00€</span> 
                                     </div>
                                 </div>
-                            </div>
-
-            
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Distribución
-                                    </button>
-                                </h2>
-
-                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                            <strong>Envío:</strong>
-                                            <p>Envío estándar (15-30 días laborables)</p>
-                                            <p>Envío acelerado (3-7 días hábiles)</p>
-                                            <p>Los gastos de envío variarán en base al lugar de destino.</p>
+                                
+                                <div class="cart__btn">
+                                    <div class="cart" id="cart">
+                                        <p>Add to cart</p>
                                     </div>
                                 </div>
+                                
                             </div>
-
-            
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Política de devolución
-                                    </button>
-                                </h2>
-
-                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                            <strong>Defectos:</strong>
-                                            <p>1. Los artículos limitados no tienen servicio de cambio. Si encuentra un defecto grave en el artículo, comuníquese con support@hirono.com, con el número de pedido relacionado y el video de desembalaje de la figura dentro de los cinco (5) días posteriores a la recepción del producto.</p>
-                                            <p>2. Por razones de seguridad de la información, contáctenos con la dirección de correo electrónico que utilizó para realizar el pedido. Un representante de atención al cliente se comunicará con usted y lo ayudará a resolver el problema.</p>
-                                            <p>3. Para evitar disputas relacionadas con reembolsos o cambios, se recomienda a los clientes que se graben en video abriendo el paquete. La grabación debe completarse a más tardar dos días después de la entrega. Un vídeo debe mostrar claramente la hoja de envío, el estado del paquete y los defectos del producto.</p>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Métodos de pago
-                                    </button>
-                                </h2>
-
-                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body payment__div">
-                                        <i class="fa-brands fa-cc-visa payment__icons"></i>
-                                        <i class="fa-brands fa-cc-mastercard payment__icons"></i>
-                                        <i class="fa-brands fa-cc-paypal payment__icons"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                        ¡Reglas del juego!
-                                    </button>
-                                </h2>
-
-                                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div>
-                                            <strong>¿Qué es una Blind Box?</strong>
-                                            <p>Una "Blind Box" o "Juguete Sorpresa" contiene una figura aleatoria perteneciente a una colección. Diferentes colecciones tienen diferentes figuras, y no sabrás cuál te ha tocado hasta que la abras.</p>
-                                        </div>
-
-                                        <div>
-                                            <strong>Caja Individual</strong>
-                                            <p>Contiene una figura por cada blind box. Se trata de figuras normales, con una probabilidad de obtener cada una de 1/6</p>
-                                       </div>
-
-                                       <div>
-                                            <strong>Set Completo</strong>
-                                            <p>El set completo incluye 6 blind boxes (sin repeticiones).</p>
-                                        </div>
-                                           
-                                        <div>
-                                            <strong>Edición Especial: ★Ning Ning★</strong>
-                                            <p>La probabilidad de sacar la figura secreta en esta colección es de 1/72.</p>
+    
+                            <div class="accordion" id="product-accordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            Detalles
+                                        </button>
+                                    </h2>
+    
+                                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p><strong>Marca:</strong> Hirono</p>
+    
+                                            <p><strong>Tamaño:</strong> Aproximadamente 8cm</p>
+    
+                                            <p><strong>Material:</strong> PVC/ABS/Polyester</p>
+    
+                                            <p>Un set completo contiene 6 blind boxes</p>
+    
+                                            <p>(Si se compra un set completo no habrá figuras repetidas)</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            
-
-            <section class="collection__buddies" id="collection-buddies">
-
-                <h2 class="buddies__title">Personajes de la colección</h2>
-
-                <div class="main-carousel">
-
-                    <div class="carousel-cell">
-                        <div class="card border-0 card__buddies">
-                            <img src="Resources/Producto/Producto_Coleccion/character_1.webp" class="card-img-top" alt="...">
-                           
-                            <div class="card-body">
-                              <h3 class="card-title buddies__name">Chinese</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <div class="card border-0 card__buddies">
-                            <img src="Resources/Producto/Producto_Coleccion/character_2.webp" class="card-img-top" alt="...">
-                           
-                            <div class="card-body">
-                              <h3 class="card-title buddies__name">Silk Royale</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <div class="card border-0 card__buddies">
-                            <img src="Resources/Producto/Producto_Coleccion/character_3.webp" class="card-img-top" alt="...">
-                           
-                            <div class="card-body">
-                              <h3 class="card-title buddies__name">Alienegra</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <div class="card border-0 card__buddies">
-                            <img src="Resources/Producto/Producto_Coleccion/character_4.webp" class="card-img-top" alt="...">
-                           
-                            <div class="card-body">
-                              <h3 class="card-title buddies__name">Yin-yang</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <div class="card border-0 card__buddies">
-                            <img src="Resources/Producto/Producto_Coleccion/character_5.webp" class="card-img-top" alt="...">
-                           
-                            <div class="card-body">
-                              <h3 class="card-title buddies__name">Kung Fu</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <div class="card border-0 card__buddies">
-                            <img src="Resources/Producto/Producto_Coleccion/character_6.webp" class="card-img-top" alt="...">
-                           
-                            <div class="card-body">
-                              <h3 class="card-title buddies__name">Terracota Army</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <div class="card border-0 card__buddies">
-                            <img src="Resources/Producto/Producto_Coleccion/character_7.webp" class="card-img-top" alt="...">
-                           
-                            <div class="card-body">
-                              <h3 class="card-title buddies__name">Ning Ning</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="productos__relacionados" id="productos-relacionados">
-                <h2 class="prod__rel__titulo">Productos relacionados</h2>
-                <p class="prod__rel__subtitulo">¡Desliza y descubre nuestra colección!</p>                
-                <div class="swiper prod__rel__carrusel">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-1.webp" alt="Imagen 1">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-2.webp" alt="Imagen 2">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-3.webp" alt="Imagen 3">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-4.webp" alt="Imagen 4">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-5.webp" alt="Imagen 5">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-6.webp" alt="Imagen 6">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- FOOTER -->
-        <footer class="footer_footerContainer">
-            <div class="footer_mainInfo">
-                <div class="footer_chatContainer">
-                    <div class="footer_title">ÚNETE A NUESTRA COMUNIDAD</div>
-                    <div class="footer_desc"> Se el primero en recibir las nuevas 
-                    novedades.</div>
-                    <div class="footer_inputWrap">
-                        <span class="footer_chatInput">
-                            <input placeholder="Correo electrónico" type="email">
-                        </span>
-                        <button type="submit">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                    <div class="footer_socialTitle">SÍGUENOS EN</div>
-                    <div class="footer_media">
-                        <ul class="footer_mediaIcons">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-tiktok"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-pinterest"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer_menuBloque">
-                    <div class="footer_menuListItem">
-                        <div class="footer_menuTitleBlock">
-                            <div class="footer_menuTitle">
-                                <span>AYUDA</span>
-                            </div>
-                        </div>
-                        <div class="footer_menuText">
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">FAQs</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Área legal</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Clientes</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Envíos</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Devoluciones</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Accesibilidad</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer_menuListItem">
-                        <div class="footer_menuTitleBlock">
-                            <div class="footer_menuTitle">
-                                <span>INFORMACIÓN</span>
-                            </div>
-                        </div>
-                        <div class="footer_menuText">
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Blog</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Nosotros</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Creador</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Colecciones</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Colaboraciones</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Contacto</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer_menuListItem">
-                        <div class="footer_menuTitleBlock">
-                            <div class="footer_menuTitle">
-                                <span>TIENDA</span>
-                            </div>
-                        </div>
-                        <div class="footer_menuText">
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Accesorios</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Eventos</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Noticias</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer_acordeon">
-                    <div class="footer_acordeonDisplay">
-                        <div class="footer_question">
-                            <div class="footer_menuTitleBlock">
-                                <div class="footer_menuTitle">
-                                    <span>AYUDA</span>
+    
+                
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Distribución
+                                        </button>
+                                    </h2>
+    
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                                <strong>Envío:</strong>
+                                                <p>Envío estándar (15-30 días laborables)</p>
+                                                <p>Envío acelerado (3-7 días hábiles)</p>
+                                                <p>Los gastos de envío variarán en base al lugar de destino.</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Política de devolución
+                                        </button>
+                                    </h2>
+    
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                                <strong>Defectos:</strong>
+                                                <p>1. Los artículos limitados no tienen servicio de cambio. Si encuentra un defecto grave en el artículo, comuníquese con support@hirono.com, con el número de pedido relacionado y el video de desembalaje de la figura dentro de los cinco (5) días posteriores a la recepción del producto.</p>
+                                                <p>2. Por razones de seguridad de la información, contáctenos con la dirección de correo electrónico que utilizó para realizar el pedido. Un representante de atención al cliente se comunicará con usted y lo ayudará a resolver el problema.</p>
+                                                <p>3. Para evitar disputas relacionadas con reembolsos o cambios, se recomienda a los clientes que se graben en video abriendo el paquete. La grabación debe completarse a más tardar dos días después de la entrega. Un vídeo debe mostrar claramente la hoja de envío, el estado del paquete y los defectos del producto.</p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+    
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Métodos de pago
+                                        </button>
+                                    </h2>
+    
+                                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body payment__div">
+                                            <i class="fa-brands fa-cc-visa payment__icons"></i>
+                                            <i class="fa-brands fa-cc-mastercard payment__icons"></i>
+                                            <i class="fa-brands fa-cc-paypal payment__icons"></i>
+                                        </div>
+                                    </div>
+                                </div>
+    
+    
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            ¡Reglas del juego!
+                                        </button>
+                                    </h2>
+    
+                                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div>
+                                                <strong>¿Qué es una Blind Box?</strong>
+                                                <p>Una "Blind Box" o "Juguete Sorpresa" contiene una figura aleatoria perteneciente a una colección. Diferentes colecciones tienen diferentes figuras, y no sabrás cuál te ha tocado hasta que la abras.</p>
+                                            </div>
+    
+                                            <div>
+                                                <strong>Caja Individual</strong>
+                                                <p>Contiene una figura por cada blind box. Se trata de figuras normales, con una probabilidad de obtener cada una de 1/6</p>
+                                           </div>
+    
+                                           <div>
+                                                <strong>Set Completo</strong>
+                                                <p>El set completo incluye 6 blind boxes (sin repeticiones).</p>
+                                            </div>
+                                               
+                                            <div>
+                                                <strong>Edición Especial: ★Ning Ning★</strong>
+                                                <p>La probabilidad de sacar la figura secreta en esta colección es de 1/72.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <svg width="15" height="10" viewBox=" 0 0 42 25">
-                                <path d="M3 3L21 21L39 3" fill="none" stroke="#DBDBDB" stroke-width="7" stroke-linecap="round" ></path>
-                            </svg>
-                        </div>
-                        <div class="footer_answer">
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">FAQs</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Área legal</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Clientes</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Envíos</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Devoluciones</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Accesibilidad</a>
-                            </div>
                         </div>
                     </div>
-                    <div class="footer_acordeonDisplay">
-                        <div id="footer_topNo" class="footer_question">
-                            <div class="footer_menuTitleBlock">
-                                <div class="footer_menuTitle">
-                                    <span>INFORMACIÓN</span>
+                </section>
+    
+                
+    
+                <section class="collection__buddies" id="collection-buddies">
+    
+                    <h2 class="buddies__title">Personajes de la colección</h2>
+    
+                    <div class="main-carousel">
+    
+                        <div class="carousel-cell">
+                            <div class="card border-0 card__buddies">
+                                <img src="Resources/Producto/Producto_Coleccion/character_1.webp" class="card-img-top" alt="...">
+                               
+                                <div class="card-body">
+                                  <h3 class="card-title buddies__name">Chinese</h3>
                                 </div>
                             </div>
-                            <svg width="15" height="10" viewBox=" 0 0 42 25">
-                                <path d="M3 3L21 21L39 3" fill="none" stroke="#DBDBDB" stroke-width="7" stroke-linecap="round" ></path>
-                            </svg>
                         </div>
-                        <div class="footer_answer">
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Blog</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Nosotros</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Creador</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Colecciones</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Colaboraciones</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Contacto</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer_acordeonDisplay">
-                        <div id="footer_topNo" class="footer_question">
-                            <div class="footer_menuTitleBlock">
-                                <div class="footer_menuTitle">
-                                    <span>TIENDA</span>
+    
+                        <div class="carousel-cell">
+                            <div class="card border-0 card__buddies">
+                                <img src="Resources/Producto/Producto_Coleccion/character_2.webp" class="card-img-top" alt="...">
+                               
+                                <div class="card-body">
+                                  <h3 class="card-title buddies__name">Silk Royale</h3>
                                 </div>
                             </div>
-                            <svg width="15" height="10" viewBox=" 0 0 42 25">
-                                <path d="M3 3L21 21L39 3" fill="none" stroke="#DBDBDB" stroke-width="7" stroke-linecap="round" ></path>
-                            </svg>
                         </div>
-                        <div class="footer_answer">
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Accesorios</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Eventos</a>
-                            </div>
-                            <div class="footer_menuTextTitle">
-                                <a target="_self" rel="" href="">Noticias</a>
+    
+                        <div class="carousel-cell">
+                            <div class="card border-0 card__buddies">
+                                <img src="Resources/Producto/Producto_Coleccion/character_3.webp" class="card-img-top" alt="...">
+                               
+                                <div class="card-body">
+                                  <h3 class="card-title buddies__name">Alienegra</h3>
+                                </div>
                             </div>
                         </div>
+    
+                        <div class="carousel-cell">
+                            <div class="card border-0 card__buddies">
+                                <img src="Resources/Producto/Producto_Coleccion/character_4.webp" class="card-img-top" alt="...">
+                               
+                                <div class="card-body">
+                                  <h3 class="card-title buddies__name">Yin-yang</h3>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="carousel-cell">
+                            <div class="card border-0 card__buddies">
+                                <img src="Resources/Producto/Producto_Coleccion/character_5.webp" class="card-img-top" alt="...">
+                               
+                                <div class="card-body">
+                                  <h3 class="card-title buddies__name">Kung Fu</h3>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="carousel-cell">
+                            <div class="card border-0 card__buddies">
+                                <img src="Resources/Producto/Producto_Coleccion/character_6.webp" class="card-img-top" alt="...">
+                               
+                                <div class="card-body">
+                                  <h3 class="card-title buddies__name">Terracota Army</h3>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="carousel-cell">
+                            <div class="card border-0 card__buddies">
+                                <img src="Resources/Producto/Producto_Coleccion/character_7.webp" class="card-img-top" alt="...">
+                               
+                                <div class="card-body">
+                                  <h3 class="card-title buddies__name">Ning Ning</h3>
+                                </div>
+                            </div>
+                        </div>
+    
                     </div>
-                </div>
-            </div>
-            <div class="fotter_bottom">
-                <div class="footer_copyRight">
-                    <div>
-                        ©
-                        2025
-                        HIRONO ALL RIGHTS RESERVED
-                    </div>
-                </div>
-                <div class="footer_creditCard">
-                    <div class="footer_creditCardItem">
-                        <div class="footer_image">
-                            <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/amex.webp" width="100%" height="100%" style="height: 100%;">
+                </section>
+    
+                <section class="productos__relacionados" id="productos-relacionados">
+                    <h2 class="prod__rel__titulo">Productos relacionados</h2>
+                    <p class="prod__rel__subtitulo">¡Desliza y descubre nuestra colección!</p>                
+                    <div class="swiper prod__rel__carrusel">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-1.webp" alt="Imagen 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-2.webp" alt="Imagen 2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-3.webp" alt="Imagen 3">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-4.webp" alt="Imagen 4">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-5.webp" alt="Imagen 5">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Resources/Producto/Producto_Relacionados/relacionados-carr-6.webp" alt="Imagen 6">
+                            </div>
                         </div>
                     </div>
-                    <div class="footer_creditCardItem">
-                        <div class="footer_image">
-                            <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/creditcard1.webp" width="100%" height="100%" style="height: 100%;">
+                </section>
+    
+                <!-- FOOTER -->
+                <footer class="footer_footerContainer">
+                    <div class="footer_mainInfo">
+                        <div class="footer_chatContainer">
+                            <div class="footer_title">ÚNETE A NUESTRA COMUNIDAD</div>
+                            <div class="footer_desc"> Se el primero en recibir las nuevas 
+                            novedades.</div>
+                            <div class="footer_inputWrap">
+                                <span class="footer_chatInput">
+                                    <input placeholder="Correo electrónico" type="email">
+                                </span>
+                                <button type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <div class="footer_socialTitle">SÍGUENOS EN</div>
+                            <div class="footer_media">
+                                <ul class="footer_mediaIcons">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-tiktok"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fab fa-pinterest"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_menuBloque">
+                            <div class="footer_menuListItem">
+                                <div class="footer_menuTitleBlock">
+                                    <div class="footer_menuTitle">
+                                        <span>AYUDA</span>
+                                    </div>
+                                </div>
+                                <div class="footer_menuText">
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">FAQs</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Área legal</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Clientes</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Envíos</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Devoluciones</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Accesibilidad</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer_menuListItem">
+                                <div class="footer_menuTitleBlock">
+                                    <div class="footer_menuTitle">
+                                        <span>INFORMACIÓN</span>
+                                    </div>
+                                </div>
+                                <div class="footer_menuText">
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Blog</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Nosotros</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Creador</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Colecciones</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Colaboraciones</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Contacto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer_menuListItem">
+                                <div class="footer_menuTitleBlock">
+                                    <div class="footer_menuTitle">
+                                        <span>TIENDA</span>
+                                    </div>
+                                </div>
+                                <div class="footer_menuText">
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Accesorios</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Eventos</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Noticias</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer_acordeon">
+                            <div class="footer_acordeonDisplay">
+                                <div class="footer_question">
+                                    <div class="footer_menuTitleBlock">
+                                        <div class="footer_menuTitle">
+                                            <span>AYUDA</span>
+                                        </div>
+                                    </div>
+                                    <svg width="15" height="10" viewBox=" 0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" fill="none" stroke="#DBDBDB" stroke-width="7" stroke-linecap="round" ></path>
+                                    </svg>
+                                </div>
+                                <div class="footer_answer">
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">FAQs</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Área legal</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Clientes</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Envíos</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Devoluciones</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Accesibilidad</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer_acordeonDisplay">
+                                <div id="footer_topNo" class="footer_question">
+                                    <div class="footer_menuTitleBlock">
+                                        <div class="footer_menuTitle">
+                                            <span>INFORMACIÓN</span>
+                                        </div>
+                                    </div>
+                                    <svg width="15" height="10" viewBox=" 0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" fill="none" stroke="#DBDBDB" stroke-width="7" stroke-linecap="round" ></path>
+                                    </svg>
+                                </div>
+                                <div class="footer_answer">
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Blog</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Nosotros</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Creador</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Colecciones</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Colaboraciones</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Contacto</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer_acordeonDisplay">
+                                <div id="footer_topNo" class="footer_question">
+                                    <div class="footer_menuTitleBlock">
+                                        <div class="footer_menuTitle">
+                                            <span>TIENDA</span>
+                                        </div>
+                                    </div>
+                                    <svg width="15" height="10" viewBox=" 0 0 42 25">
+                                        <path d="M3 3L21 21L39 3" fill="none" stroke="#DBDBDB" stroke-width="7" stroke-linecap="round" ></path>
+                                    </svg>
+                                </div>
+                                <div class="footer_answer">
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Accesorios</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Eventos</a>
+                                    </div>
+                                    <div class="footer_menuTextTitle">
+                                        <a target="_self" rel="" href="">Noticias</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="footer_creditCardItem">
-                        <div class="footer_image">
-                            <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/discover.webp" width="100%" height="100%" style="height: 100%;">
+                    <div class="fotter_bottom">
+                        <div class="footer_copyRight">
+                            <div>
+                                ©
+                                2025
+                                HIRONO ALL RIGHTS RESERVED
+                            </div>
+                        </div>
+                        <div class="footer_creditCard">
+                            <div class="footer_creditCardItem">
+                                <div class="footer_image">
+                                    <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/amex.webp" width="100%" height="100%" style="height: 100%;">
+                                </div>
+                            </div>
+                            <div class="footer_creditCardItem">
+                                <div class="footer_image">
+                                    <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/creditcard1.webp" width="100%" height="100%" style="height: 100%;">
+                                </div>
+                            </div>
+                            <div class="footer_creditCardItem">
+                                <div class="footer_image">
+                                    <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/discover.webp" width="100%" height="100%" style="height: 100%;">
+                                </div>
+                            </div>
+                            <div class="footer_creditCardItem">
+                                <div class="footer_image">
+                                    <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/jcb.webp" width="100%" height="100%" style="height: 100%;">
+                                </div>
+                            </div>
+                            <div class="footer_creditCardItem">
+                                <div class="footer_image">
+                                    <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/mastercard.webp" width="100%" height="100%" style="height: 100%;">
+                                </div>
+                            </div>
+                            <div class="footer_creditCardItem">
+                                <div class="footer_image">
+                                    <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/paypal.webp" width="100%" height="100%" style="height: 100%;">
+                                </div>
+                            </div>
+                            <div class="footer_creditCardItem">
+                                <div class="footer_image">
+                                    <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/visa.webp" width="100%" height="100%" style="height: 100%;">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="footer_creditCardItem">
-                        <div class="footer_image">
-                            <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/jcb.webp" width="100%" height="100%" style="height: 100%;">
-                        </div>
-                    </div>
-                    <div class="footer_creditCardItem">
-                        <div class="footer_image">
-                            <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/mastercard.webp" width="100%" height="100%" style="height: 100%;">
-                        </div>
-                    </div>
-                    <div class="footer_creditCardItem">
-                        <div class="footer_image">
-                            <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/paypal.webp" width="100%" height="100%" style="height: 100%;">
-                        </div>
-                    </div>
-                    <div class="footer_creditCardItem">
-                        <div class="footer_image">
-                            <img alt="HIRONO" class="footer_image_img" src="Resources/Footer/visa.webp" width="100%" height="100%" style="height: 100%;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+                </footer>
+            </main>
+    
+
       
         <!--=============== BIBLIOTECAS JS ===============-->
 

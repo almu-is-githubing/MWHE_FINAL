@@ -147,3 +147,15 @@ acordeons.forEach((footer_acordeonDisplay) => {
         footer_acordeonDisplay.classList.toggle("active")
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+  });
+
+  // Recalcula las alturas en caso de que algo no se renderice correctamente
+  window.addEventListener('resize', () => {
+    scroll.update();
+  });
+});
